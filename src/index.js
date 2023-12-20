@@ -1,12 +1,11 @@
 import ReactDOM from "react-dom";
-import Test from "./Test";
+import Timer from "./Timer";
 
 const App = () =>{
     return(
-        <>
-        <h1>App Component</h1>
-        <Test />
-        </>
+        <main className="pt-12 max-w-80 mx-auto text-center">
+            <Timer/>
+        </main>
     )
 };
 
