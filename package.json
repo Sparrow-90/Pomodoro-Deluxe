@@ -2,7 +2,6 @@
   "name": "pomodoro-deluxe",
   "version": "1.0.0",
   "description": "Meet Pomodoro Pro, your ultimate productivity companion! Unleash the power of focused work and enhanced time management with this intuitive Pomodoro Technique app. Boost your productivity, stay organized, and achieve your goals with ease.",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/*index.html",
@@ -12,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
   }
 }
