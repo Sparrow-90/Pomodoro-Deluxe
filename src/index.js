@@ -1,4 +1,6 @@
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('root');
+const root = createRoot(container);
 import Timer from "./Timer";
 
 const App = () =>{
@@ -9,4 +11,4 @@ const App = () =>{
     )
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+root.render(<App />);

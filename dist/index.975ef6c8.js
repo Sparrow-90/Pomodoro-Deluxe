@@ -2944,30 +2944,31 @@ $parcel$ReactRefreshHelpers$20e5.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _client = require("react-dom/client");
 var _timer = require("./Timer");
 var _timerDefault = parcelHelpers.interopDefault(_timer);
+const container = document.getElementById("root");
+const root = (0, _client.createRoot)(container);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: "pt-12 max-w-80 mx-auto text-center",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 7,
+            lineNumber: 9,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 6,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined);
 };
 _c = App;
-(0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 12,
-    columnNumber: 17
-}, undefined), document.getElementById("root"));
+    lineNumber: 14,
+    columnNumber: 13
+}, undefined));
 var _c;
 $RefreshReg$(_c, "App");
 
@@ -2976,7 +2977,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Timer":"9sZLP"}],"km3Ru":[function(require,module,exports) {
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Timer":"9sZLP","react-dom/client":"lOjBx"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -5819,7 +5820,483 @@ module.exports = require("a569817e6ea559f6");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"9sZLP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7d4a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7d4a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Timer);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactCircularProgressbar = require("react-circular-progressbar");
+var _stylesCss = require("react-circular-progressbar/dist/styles.css");
+var _playButton = require("./PlayButton");
+var _playButtonDefault = parcelHelpers.interopDefault(_playButton);
+var _pauseButton = require("./PauseButton");
+var _pauseButtonDefault = parcelHelpers.interopDefault(_pauseButton);
+const percentage = 60;
+function Timer() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactCircularProgressbar.CircularProgressbar), {
+                value: percentage,
+                text: `${percentage}%`,
+                styles: (0, _reactCircularProgressbar.buildStyles)({
+                    textColor: "#fff",
+                    pathColor: "#ef4444",
+                    tailColor: "#10b981"
+                })
+            }, void 0, false, {
+                fileName: "src/Timer.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "mt-[20px]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
+                        fileName: "src/Timer.jsx",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
+                        fileName: "src/Timer.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/Timer.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/Timer.jsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, this);
+}
+_c = Timer;
+var _c;
+$RefreshReg$(_c, "Timer");
+
+  $parcel$ReactRefreshHelpers$7d4a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT","./PlayButton":"kv3W7","./PauseButton":"6R3G6"}],"iGJmv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CircularProgressbar", ()=>CircularProgressbar);
+parcelHelpers.export(exports, "CircularProgressbarWithChildren", ()=>CircularProgressbarWithChildren);
+parcelHelpers.export(exports, "buildStyles", ()=>buildStyles);
+var _react = require("react");
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */ /* global Reflect, Promise */ var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf || ({
+        __proto__: []
+    }) instanceof Array && function(d, b) {
+        d.__proto__ = b;
+    } || function(d, b) {
+        for(var p in b)if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return extendStatics(d, b);
+};
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() {
+        this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+function __rest(s, e) {
+    var t = {};
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
+    }
+    return t;
+}
+var VIEWBOX_WIDTH = 100;
+var VIEWBOX_HEIGHT = 100;
+var VIEWBOX_HEIGHT_HALF = 50;
+var VIEWBOX_CENTER_X = 50;
+var VIEWBOX_CENTER_Y = 50;
+function Path(_a) {
+    var className = _a.className, counterClockwise = _a.counterClockwise, dashRatio = _a.dashRatio, pathRadius = _a.pathRadius, strokeWidth = _a.strokeWidth, style = _a.style;
+    return (0, _react.createElement)("path", {
+        className: className,
+        style: Object.assign({}, style, getDashStyle({
+            pathRadius: pathRadius,
+            dashRatio: dashRatio,
+            counterClockwise: counterClockwise
+        })),
+        d: getPathDescription({
+            pathRadius: pathRadius,
+            counterClockwise: counterClockwise
+        }),
+        strokeWidth: strokeWidth,
+        fillOpacity: 0
+    });
+}
+function getPathDescription(_a) {
+    var pathRadius = _a.pathRadius, counterClockwise = _a.counterClockwise;
+    var radius = pathRadius;
+    var rotation = counterClockwise ? 1 : 0;
+    return "\n      M " + VIEWBOX_CENTER_X + "," + VIEWBOX_CENTER_Y + "\n      m 0,-" + radius + "\n      a " + radius + "," + radius + " " + rotation + " 1 1 0," + 2 * radius + "\n      a " + radius + "," + radius + " " + rotation + " 1 1 0,-" + 2 * radius + "\n    ";
+}
+function getDashStyle(_a) {
+    var counterClockwise = _a.counterClockwise, dashRatio = _a.dashRatio, pathRadius = _a.pathRadius;
+    var diameter = Math.PI * 2 * pathRadius;
+    var gapLength = (1 - dashRatio) * diameter;
+    return {
+        strokeDasharray: diameter + "px " + diameter + "px",
+        strokeDashoffset: (counterClockwise ? -gapLength : gapLength) + "px"
+    };
+}
+var CircularProgressbar = function(_super) {
+    __extends(CircularProgressbar, _super);
+    function CircularProgressbar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CircularProgressbar.prototype.getBackgroundPadding = function() {
+        if (!this.props.background) return 0;
+        return this.props.backgroundPadding;
+    };
+    CircularProgressbar.prototype.getPathRadius = function() {
+        return VIEWBOX_HEIGHT_HALF - this.props.strokeWidth / 2 - this.getBackgroundPadding();
+    };
+    CircularProgressbar.prototype.getPathRatio = function() {
+        var _a = this.props, value = _a.value, minValue = _a.minValue, maxValue = _a.maxValue;
+        var boundedValue = Math.min(Math.max(value, minValue), maxValue);
+        return (boundedValue - minValue) / (maxValue - minValue);
+    };
+    CircularProgressbar.prototype.render = function() {
+        var _a = this.props, circleRatio = _a.circleRatio, className = _a.className, classes = _a.classes, counterClockwise = _a.counterClockwise, styles = _a.styles, strokeWidth = _a.strokeWidth, text = _a.text;
+        var pathRadius = this.getPathRadius();
+        var pathRatio = this.getPathRatio();
+        return (0, _react.createElement)("svg", {
+            className: classes.root + " " + className,
+            style: styles.root,
+            viewBox: "0 0 " + VIEWBOX_WIDTH + " " + VIEWBOX_HEIGHT,
+            "data-test-id": "CircularProgressbar"
+        }, this.props.background ? (0, _react.createElement)("circle", {
+            className: classes.background,
+            style: styles.background,
+            cx: VIEWBOX_CENTER_X,
+            cy: VIEWBOX_CENTER_Y,
+            r: VIEWBOX_HEIGHT_HALF
+        }) : null, (0, _react.createElement)(Path, {
+            className: classes.trail,
+            counterClockwise: counterClockwise,
+            dashRatio: circleRatio,
+            pathRadius: pathRadius,
+            strokeWidth: strokeWidth,
+            style: styles.trail
+        }), (0, _react.createElement)(Path, {
+            className: classes.path,
+            counterClockwise: counterClockwise,
+            dashRatio: pathRatio * circleRatio,
+            pathRadius: pathRadius,
+            strokeWidth: strokeWidth,
+            style: styles.path
+        }), text ? (0, _react.createElement)("text", {
+            className: classes.text,
+            style: styles.text,
+            x: VIEWBOX_CENTER_X,
+            y: VIEWBOX_CENTER_Y
+        }, text) : null);
+    };
+    CircularProgressbar.defaultProps = {
+        background: false,
+        backgroundPadding: 0,
+        circleRatio: 1,
+        classes: {
+            root: "CircularProgressbar",
+            trail: "CircularProgressbar-trail",
+            path: "CircularProgressbar-path",
+            text: "CircularProgressbar-text",
+            background: "CircularProgressbar-background"
+        },
+        counterClockwise: false,
+        className: "",
+        maxValue: 100,
+        minValue: 0,
+        strokeWidth: 8,
+        styles: {
+            root: {},
+            trail: {},
+            path: {},
+            text: {},
+            background: {}
+        },
+        text: ""
+    };
+    return CircularProgressbar;
+}((0, _react.Component));
+function CircularProgressbarWithChildren(props) {
+    var children = props.children, circularProgressbarProps = __rest(props, [
+        "children"
+    ]);
+    return (0, _react.createElement)("div", {
+        "data-test-id": "CircularProgressbarWithChildren"
+    }, (0, _react.createElement)("div", {
+        style: {
+            position: "relative",
+            width: "100%",
+            height: "100%"
+        }
+    }, (0, _react.createElement)(CircularProgressbar, __assign({}, circularProgressbarProps)), props.children ? (0, _react.createElement)("div", {
+        "data-test-id": "CircularProgressbarWithChildren__children",
+        style: {
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            marginTop: "-100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        }
+    }, props.children) : null));
+}
+function buildStyles(_a) {
+    var rotation = _a.rotation, strokeLinecap = _a.strokeLinecap, textColor = _a.textColor, textSize = _a.textSize, pathColor = _a.pathColor, pathTransition = _a.pathTransition, pathTransitionDuration = _a.pathTransitionDuration, trailColor = _a.trailColor, backgroundColor = _a.backgroundColor;
+    var rotationTransform = rotation == null ? undefined : "rotate(" + rotation + "turn)";
+    var rotationTransformOrigin = rotation == null ? undefined : "center center";
+    return {
+        root: {},
+        path: removeUndefinedValues({
+            stroke: pathColor,
+            strokeLinecap: strokeLinecap,
+            transform: rotationTransform,
+            transformOrigin: rotationTransformOrigin,
+            transition: pathTransition,
+            transitionDuration: pathTransitionDuration == null ? undefined : pathTransitionDuration + "s"
+        }),
+        trail: removeUndefinedValues({
+            stroke: trailColor,
+            strokeLinecap: strokeLinecap,
+            transform: rotationTransform,
+            transformOrigin: rotationTransformOrigin
+        }),
+        text: removeUndefinedValues({
+            fill: textColor,
+            fontSize: textSize
+        }),
+        background: removeUndefinedValues({
+            fill: backgroundColor
+        })
+    };
+}
+function removeUndefinedValues(obj) {
+    Object.keys(obj).forEach(function(key) {
+        if (obj[key] == null) delete obj[key];
+    });
+    return obj;
+}
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSnaT":[function() {},{}],"kv3W7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b29 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b29.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>PlayButton);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _playSvg = require("/assets/play.svg");
+var _playSvgDefault = parcelHelpers.interopDefault(_playSvg);
+function PlayButton(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        ...props,
+        className: "w-12 bg-transparent inline-block",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "text-white ",
+            src: (0, _playSvgDefault.default),
+            alt: ""
+        }, void 0, false, {
+            fileName: "src/PlayButton.jsx",
+            lineNumber: 6,
+            columnNumber: 9
+        }, this)
+    }, void 0, false, {
+        fileName: "src/PlayButton.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = PlayButton;
+var _c;
+$RefreshReg$(_c, "PlayButton");
+
+  $parcel$ReactRefreshHelpers$0b29.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/assets/play.svg":"9sBe2"}],"9sBe2":[function(require,module,exports) {
+module.exports = require("ba155bbfaa0a73b4").getBundleURL("bLxZJ") + "play.35ea4d85.svg" + "?" + Date.now();
+
+},{"ba155bbfaa0a73b4":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"6R3G6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$263e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$263e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _pauseSvg = require("/assets/pause.svg");
+var _pauseSvgDefault = parcelHelpers.interopDefault(_pauseSvg);
+function PauseButton(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        ...props,
+        className: "w-12 bg-transparent inline-block",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            src: (0, _pauseSvgDefault.default),
+            alt: ""
+        }, void 0, false, {
+            fileName: "src/PauseButton.jsx",
+            lineNumber: 6,
+            columnNumber: 9
+        }, this)
+    }, void 0, false, {
+        fileName: "src/PauseButton.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = PauseButton;
+exports.default = PauseButton;
+var _c;
+$RefreshReg$(_c, "PauseButton");
+
+  $parcel$ReactRefreshHelpers$263e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","/assets/pause.svg":"lf6wK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lf6wK":[function(require,module,exports) {
+module.exports = require("b5dfeef266552055").getBundleURL("bLxZJ") + "pause.8fc8da9b.svg" + "?" + Date.now();
+
+},{"b5dfeef266552055":"lgJ39"}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("aaccff5d309d9239");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"aaccff5d309d9239":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -27280,309 +27757,6 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"9sZLP":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7d4a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7d4a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Timer);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactCircularProgressbar = require("react-circular-progressbar");
-var _stylesCss = require("react-circular-progressbar/dist/styles.css");
-const percentage = 60;
-function Timer() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactCircularProgressbar.CircularProgressbar), {
-            value: percentage,
-            text: `${percentage}%`
-        }, void 0, false, {
-            fileName: "src/Timer.jsx",
-            lineNumber: 9,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "src/Timer.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, this);
-}
-_c = Timer;
-var _c;
-$RefreshReg$(_c, "Timer");
-
-  $parcel$ReactRefreshHelpers$7d4a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT"}],"iGJmv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CircularProgressbar", ()=>CircularProgressbar);
-parcelHelpers.export(exports, "CircularProgressbarWithChildren", ()=>CircularProgressbarWithChildren);
-parcelHelpers.export(exports, "buildStyles", ()=>buildStyles);
-var _react = require("react");
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */ /* global Reflect, Promise */ var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf || ({
-        __proto__: []
-    }) instanceof Array && function(d, b) {
-        d.__proto__ = b;
-    } || function(d, b) {
-        for(var p in b)if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return extendStatics(d, b);
-};
-function __extends(d, b) {
-    extendStatics(d, b);
-    function __() {
-        this.constructor = d;
-    }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for(var s, i = 1, n = arguments.length; i < n; i++){
-            s = arguments[i];
-            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-function __rest(s, e) {
-    var t = {};
-    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
-        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-    }
-    return t;
-}
-var VIEWBOX_WIDTH = 100;
-var VIEWBOX_HEIGHT = 100;
-var VIEWBOX_HEIGHT_HALF = 50;
-var VIEWBOX_CENTER_X = 50;
-var VIEWBOX_CENTER_Y = 50;
-function Path(_a) {
-    var className = _a.className, counterClockwise = _a.counterClockwise, dashRatio = _a.dashRatio, pathRadius = _a.pathRadius, strokeWidth = _a.strokeWidth, style = _a.style;
-    return (0, _react.createElement)("path", {
-        className: className,
-        style: Object.assign({}, style, getDashStyle({
-            pathRadius: pathRadius,
-            dashRatio: dashRatio,
-            counterClockwise: counterClockwise
-        })),
-        d: getPathDescription({
-            pathRadius: pathRadius,
-            counterClockwise: counterClockwise
-        }),
-        strokeWidth: strokeWidth,
-        fillOpacity: 0
-    });
-}
-function getPathDescription(_a) {
-    var pathRadius = _a.pathRadius, counterClockwise = _a.counterClockwise;
-    var radius = pathRadius;
-    var rotation = counterClockwise ? 1 : 0;
-    return "\n      M " + VIEWBOX_CENTER_X + "," + VIEWBOX_CENTER_Y + "\n      m 0,-" + radius + "\n      a " + radius + "," + radius + " " + rotation + " 1 1 0," + 2 * radius + "\n      a " + radius + "," + radius + " " + rotation + " 1 1 0,-" + 2 * radius + "\n    ";
-}
-function getDashStyle(_a) {
-    var counterClockwise = _a.counterClockwise, dashRatio = _a.dashRatio, pathRadius = _a.pathRadius;
-    var diameter = Math.PI * 2 * pathRadius;
-    var gapLength = (1 - dashRatio) * diameter;
-    return {
-        strokeDasharray: diameter + "px " + diameter + "px",
-        strokeDashoffset: (counterClockwise ? -gapLength : gapLength) + "px"
-    };
-}
-var CircularProgressbar = function(_super) {
-    __extends(CircularProgressbar, _super);
-    function CircularProgressbar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    CircularProgressbar.prototype.getBackgroundPadding = function() {
-        if (!this.props.background) return 0;
-        return this.props.backgroundPadding;
-    };
-    CircularProgressbar.prototype.getPathRadius = function() {
-        return VIEWBOX_HEIGHT_HALF - this.props.strokeWidth / 2 - this.getBackgroundPadding();
-    };
-    CircularProgressbar.prototype.getPathRatio = function() {
-        var _a = this.props, value = _a.value, minValue = _a.minValue, maxValue = _a.maxValue;
-        var boundedValue = Math.min(Math.max(value, minValue), maxValue);
-        return (boundedValue - minValue) / (maxValue - minValue);
-    };
-    CircularProgressbar.prototype.render = function() {
-        var _a = this.props, circleRatio = _a.circleRatio, className = _a.className, classes = _a.classes, counterClockwise = _a.counterClockwise, styles = _a.styles, strokeWidth = _a.strokeWidth, text = _a.text;
-        var pathRadius = this.getPathRadius();
-        var pathRatio = this.getPathRatio();
-        return (0, _react.createElement)("svg", {
-            className: classes.root + " " + className,
-            style: styles.root,
-            viewBox: "0 0 " + VIEWBOX_WIDTH + " " + VIEWBOX_HEIGHT,
-            "data-test-id": "CircularProgressbar"
-        }, this.props.background ? (0, _react.createElement)("circle", {
-            className: classes.background,
-            style: styles.background,
-            cx: VIEWBOX_CENTER_X,
-            cy: VIEWBOX_CENTER_Y,
-            r: VIEWBOX_HEIGHT_HALF
-        }) : null, (0, _react.createElement)(Path, {
-            className: classes.trail,
-            counterClockwise: counterClockwise,
-            dashRatio: circleRatio,
-            pathRadius: pathRadius,
-            strokeWidth: strokeWidth,
-            style: styles.trail
-        }), (0, _react.createElement)(Path, {
-            className: classes.path,
-            counterClockwise: counterClockwise,
-            dashRatio: pathRatio * circleRatio,
-            pathRadius: pathRadius,
-            strokeWidth: strokeWidth,
-            style: styles.path
-        }), text ? (0, _react.createElement)("text", {
-            className: classes.text,
-            style: styles.text,
-            x: VIEWBOX_CENTER_X,
-            y: VIEWBOX_CENTER_Y
-        }, text) : null);
-    };
-    CircularProgressbar.defaultProps = {
-        background: false,
-        backgroundPadding: 0,
-        circleRatio: 1,
-        classes: {
-            root: "CircularProgressbar",
-            trail: "CircularProgressbar-trail",
-            path: "CircularProgressbar-path",
-            text: "CircularProgressbar-text",
-            background: "CircularProgressbar-background"
-        },
-        counterClockwise: false,
-        className: "",
-        maxValue: 100,
-        minValue: 0,
-        strokeWidth: 8,
-        styles: {
-            root: {},
-            trail: {},
-            path: {},
-            text: {},
-            background: {}
-        },
-        text: ""
-    };
-    return CircularProgressbar;
-}((0, _react.Component));
-function CircularProgressbarWithChildren(props) {
-    var children = props.children, circularProgressbarProps = __rest(props, [
-        "children"
-    ]);
-    return (0, _react.createElement)("div", {
-        "data-test-id": "CircularProgressbarWithChildren"
-    }, (0, _react.createElement)("div", {
-        style: {
-            position: "relative",
-            width: "100%",
-            height: "100%"
-        }
-    }, (0, _react.createElement)(CircularProgressbar, __assign({}, circularProgressbarProps)), props.children ? (0, _react.createElement)("div", {
-        "data-test-id": "CircularProgressbarWithChildren__children",
-        style: {
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            marginTop: "-100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center"
-        }
-    }, props.children) : null));
-}
-function buildStyles(_a) {
-    var rotation = _a.rotation, strokeLinecap = _a.strokeLinecap, textColor = _a.textColor, textSize = _a.textSize, pathColor = _a.pathColor, pathTransition = _a.pathTransition, pathTransitionDuration = _a.pathTransitionDuration, trailColor = _a.trailColor, backgroundColor = _a.backgroundColor;
-    var rotationTransform = rotation == null ? undefined : "rotate(" + rotation + "turn)";
-    var rotationTransformOrigin = rotation == null ? undefined : "center center";
-    return {
-        root: {},
-        path: removeUndefinedValues({
-            stroke: pathColor,
-            strokeLinecap: strokeLinecap,
-            transform: rotationTransform,
-            transformOrigin: rotationTransformOrigin,
-            transition: pathTransition,
-            transitionDuration: pathTransitionDuration == null ? undefined : pathTransitionDuration + "s"
-        }),
-        trail: removeUndefinedValues({
-            stroke: trailColor,
-            strokeLinecap: strokeLinecap,
-            transform: rotationTransform,
-            transformOrigin: rotationTransformOrigin
-        }),
-        text: removeUndefinedValues({
-            fill: textColor,
-            fontSize: textSize
-        }),
-        background: removeUndefinedValues({
-            fill: backgroundColor
-        })
-    };
-}
-function removeUndefinedValues(obj) {
-    Object.keys(obj).forEach(function(key) {
-        if (obj[key] == null) delete obj[key];
-    });
-    return obj;
-}
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSnaT":[function() {},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
+},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
 
 //# sourceMappingURL=index.975ef6c8.js.map
