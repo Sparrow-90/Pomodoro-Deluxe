@@ -5867,9 +5867,12 @@ var _playButton = require("./PlayButton");
 var _playButtonDefault = parcelHelpers.interopDefault(_playButton);
 var _pauseButton = require("./PauseButton");
 var _pauseButtonDefault = parcelHelpers.interopDefault(_pauseButton);
+var _settingButton = require("./SettingButton");
+var _settingButtonDefault = parcelHelpers.interopDefault(_settingButton);
 const percentage = 60;
 function Timer() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mt-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactCircularProgressbar.CircularProgressbar), {
                 value: percentage,
@@ -5902,6 +5905,18 @@ function Timer() {
                 fileName: "src/Timer.jsx",
                 lineNumber: 17,
                 columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "mt-[20px] flex justify-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingButtonDefault.default), {}, void 0, false, {
+                    fileName: "src/Timer.jsx",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/Timer.jsx",
+                lineNumber: 21,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
@@ -5919,7 +5934,7 @@ $RefreshReg$(_c, "Timer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT","./PlayButton":"kv3W7","./PauseButton":"6R3G6"}],"iGJmv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT","./PlayButton":"kv3W7","./PauseButton":"6R3G6","./SettingButton":"5Okv5"}],"iGJmv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CircularProgressbar", ()=>CircularProgressbar);
@@ -6169,7 +6184,7 @@ var _playSvgDefault = parcelHelpers.interopDefault(_playSvg);
 function PlayButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-12 bg-transparent inline-block",
+        className: "w-20 bg-transparent inline-block",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             className: "text-white ",
             src: (0, _playSvgDefault.default),
@@ -6247,7 +6262,7 @@ var _pauseSvgDefault = parcelHelpers.interopDefault(_pauseSvg);
 function PauseButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-12 bg-transparent inline-block",
+        className: "w-20 bg-transparent inline-block",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             src: (0, _pauseSvgDefault.default),
             alt: ""
@@ -6275,7 +6290,54 @@ $RefreshReg$(_c, "PauseButton");
 },{"react/jsx-dev-runtime":"iTorj","/assets/pause.svg":"lf6wK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lf6wK":[function(require,module,exports) {
 module.exports = require("b5dfeef266552055").getBundleURL("bLxZJ") + "pause.8fc8da9b.svg" + "?" + Date.now();
 
-},{"b5dfeef266552055":"lgJ39"}],"lOjBx":[function(require,module,exports) {
+},{"b5dfeef266552055":"lgJ39"}],"5Okv5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b378 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b378.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _cogSvg = require("/assets/cog.svg");
+var _cogSvgDefault = parcelHelpers.interopDefault(_cogSvg);
+function SettingButton(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        ...props,
+        className: "w-auto bg-slate-700 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "w-9",
+                src: (0, _cogSvgDefault.default),
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/SettingButton.jsx",
+                lineNumber: 6,
+                columnNumber: 9
+            }, this),
+            "Settings"
+        ]
+    }, void 0, true, {
+        fileName: "src/SettingButton.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = SettingButton;
+exports.default = SettingButton;
+var _c;
+$RefreshReg$(_c, "SettingButton");
+
+  $parcel$ReactRefreshHelpers$b378.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","/assets/cog.svg":"dDxf6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dDxf6":[function(require,module,exports) {
+module.exports = require("6d6a73a28c88151a").getBundleURL("bLxZJ") + "cog.e1e4dd30.svg" + "?" + Date.now();
+
+},{"6d6a73a28c88151a":"lgJ39"}],"lOjBx":[function(require,module,exports) {
 "use strict";
 var m = require("aaccff5d309d9239");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
