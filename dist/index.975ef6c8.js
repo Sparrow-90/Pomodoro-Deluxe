@@ -27848,7 +27848,7 @@ function Settings() {
         children: [
             "Settings",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "block",
+                className: "block mb-3 mt-5",
                 children: "work minutes"
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
@@ -27857,7 +27857,7 @@ function Settings() {
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
                 className: "h-10 border-2 border-red-500 rounded-3xl",
-                thumbClassName: "thumb",
+                thumbClassName: "bg-red-500 w-10 h-10 cursor-pointer rounded-3xl ",
                 trackClassName: "track",
                 value: 45,
                 min: 1,
@@ -27868,11 +27868,23 @@ function Settings() {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "block",
+                className: "block mb-3 mt-5",
                 children: "break minutes"
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
                 lineNumber: 16,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
+                className: "h-10 border-2 border-green-500 rounded-3xl",
+                thumbClassName: "bg-green-500 w-10 h-10 cursor-pointer rounded-3xl ",
+                trackClassName: "track",
+                value: 45,
+                min: 1,
+                max: 120
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 17,
                 columnNumber: 9
             }, this)
         ]
