@@ -2947,26 +2947,37 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _timer = require("./Timer");
 var _timerDefault = parcelHelpers.interopDefault(_timer);
+var _settings = require("./Settings");
+var _settingsDefault = parcelHelpers.interopDefault(_settings);
+var _react = require("react");
+var _s = $RefreshSig$();
 const container = document.getElementById("root");
 const root = (0, _client.createRoot)(container);
 const App = ()=>{
+    _s();
+    const [showSettings, setShowSettings] = (0, _react.useState)(true);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: "pt-12 max-w-80 mx-auto text-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
+        children: showSettings ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsDefault.default), {}, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 9,
-            columnNumber: 13
+            lineNumber: 13,
+            columnNumber: 29
+        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
+            fileName: "src/index.js",
+            lineNumber: 13,
+            columnNumber: 43
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 8,
+        lineNumber: 12,
         columnNumber: 9
     }, undefined);
 };
+_s(App, "wbQfaSz3/TfFIxKeq2mh0y12GXg=");
 _c = App;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 14,
+    lineNumber: 18,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -2977,7 +2988,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Timer":"9sZLP","react-dom/client":"lOjBx"}],"km3Ru":[function(require,module,exports) {
+},{"@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Timer":"9sZLP","react-dom/client":"lOjBx","./Settings":"cVQSK","react":"21dqq"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -27819,6 +27830,2235 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
+},{}],"cVQSK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4e50 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4e50.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactSlider = require("react-slider");
+var _reactSliderDefault = parcelHelpers.interopDefault(_reactSlider);
+function Settings() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-left",
+        children: [
+            "Settings",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "block",
+                children: "work minutes"
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 7,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
+                className: "h-10 border-2 border-red-500 rounded-3xl",
+                thumbClassName: "thumb",
+                trackClassName: "track",
+                value: 45,
+                min: 1,
+                max: 120
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 8,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "block",
+                children: "break minutes"
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 16,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/Settings.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = Settings;
+exports.default = Settings;
+var _c;
+$RefreshReg$(_c, "Settings");
+
+  $parcel$ReactRefreshHelpers$4e50.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-slider":"3unrN"}],"3unrN":[function(require,module,exports) {
+module.exports = require("880e1a7831d7dcc6");
+
+},{"880e1a7831d7dcc6":"iggI3"}],"iggI3":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var ReactSlider = require("9be5f6f20f556f2c");
+exports["default"] = ReactSlider["default"];
+
+},{"9be5f6f20f556f2c":"kMznt"}],"kMznt":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _extends = require("8a552d149b4312f4");
+var _inheritsLoose = require("309e490f93094608");
+var React = require("5ba8bab241d8d742");
+var PropTypes = require("90dd09781b5131d8");
+function _interopDefault(e) {
+    return e && e.__esModule ? e : {
+        "default": e
+    };
+}
+var _extends__default = /*#__PURE__*/ _interopDefault(_extends);
+var _inheritsLoose__default = /*#__PURE__*/ _interopDefault(_inheritsLoose);
+var React__default = /*#__PURE__*/ _interopDefault(React);
+var PropTypes__default = /*#__PURE__*/ _interopDefault(PropTypes);
+var _jsxFileName = "/Users/krise/github/react-slider/src/components/ReactSlider/ReactSlider.jsx";
+/**
+ * To prevent text selection while dragging.
+ * http://stackoverflow.com/questions/5429827/how-can-i-prevent-text-element-selection-with-cursor-drag
+ */ function pauseEvent(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    if (e && e.preventDefault) e.preventDefault();
+    return false;
+}
+function stopPropagation(e) {
+    if (e.stopPropagation) e.stopPropagation();
+}
+function sanitizeInValue(x) {
+    if (x == null) return [];
+    return Array.isArray(x) ? x.slice() : [
+        x
+    ];
+}
+function prepareOutValue(x) {
+    return x !== null && x.length === 1 ? x[0] : x.slice();
+}
+function trimSucceeding(length, nextValue, minDistance, max) {
+    for(let i = 0; i < length; i += 1){
+        const padding = max - i * minDistance;
+        if (nextValue[length - 1 - i] > padding) // eslint-disable-next-line no-param-reassign
+        nextValue[length - 1 - i] = padding;
+    }
+}
+function trimPreceding(length, nextValue, minDistance, min) {
+    for(let i = 0; i < length; i += 1){
+        const padding = min + i * minDistance;
+        if (nextValue[i] < padding) // eslint-disable-next-line no-param-reassign
+        nextValue[i] = padding;
+    }
+}
+function addHandlers(eventMap) {
+    Object.keys(eventMap).forEach((key)=>{
+        if (typeof document !== "undefined") document.addEventListener(key, eventMap[key], false);
+    });
+}
+function removeHandlers(eventMap) {
+    Object.keys(eventMap).forEach((key)=>{
+        if (typeof document !== "undefined") document.removeEventListener(key, eventMap[key], false);
+    });
+}
+function trimAlignValue(val, props) {
+    return alignValue(trimValue(val, props), props);
+}
+function alignValue(val, props) {
+    const valModStep = (val - props.min) % props.step;
+    let alignedValue = val - valModStep;
+    if (Math.abs(valModStep) * 2 >= props.step) alignedValue += valModStep > 0 ? props.step : -props.step;
+    return parseFloat(alignedValue.toFixed(5));
+}
+function trimValue(val, props) {
+    let trimmed = val;
+    if (trimmed <= props.min) trimmed = props.min;
+    if (trimmed >= props.max) trimmed = props.max;
+    return trimmed;
+}
+let ReactSlider = /*#__PURE__*/ function(_React$Component) {
+    _inheritsLoose__default["default"](ReactSlider, _React$Component);
+    function ReactSlider(_props) {
+        var _this;
+        _this = _React$Component.call(this, _props) || this;
+        _this.onKeyUp = ()=>{
+            _this.onEnd();
+        };
+        _this.onMouseUp = ()=>{
+            _this.onEnd(_this.getMouseEventMap());
+        };
+        _this.onTouchEnd = (e)=>{
+            e.preventDefault();
+            _this.onEnd(_this.getTouchEventMap());
+        };
+        _this.onBlur = ()=>{
+            _this.setState({
+                index: -1
+            }, _this.onEnd(_this.getKeyDownEventMap()));
+        };
+        _this.onMouseMove = (e)=>{
+            // Prevent controlled updates from happening while mouse is moving
+            _this.setState({
+                pending: true
+            });
+            const position = _this.getMousePosition(e);
+            const diffPosition = _this.getDiffPosition(position[0]);
+            const newValue = _this.getValueFromPosition(diffPosition);
+            _this.move(newValue);
+        };
+        _this.onTouchMove = (e)=>{
+            if (e.touches.length > 1) return;
+             // Prevent controlled updates from happending while touch is moving
+            _this.setState({
+                pending: true
+            });
+            const position = _this.getTouchPosition(e);
+            if (typeof _this.isScrolling === "undefined") {
+                const diffMainDir = position[0] - _this.startPosition[0];
+                const diffScrollDir = position[1] - _this.startPosition[1];
+                _this.isScrolling = Math.abs(diffScrollDir) > Math.abs(diffMainDir);
+            }
+            if (_this.isScrolling) {
+                _this.setState({
+                    index: -1
+                });
+                return;
+            }
+            const diffPosition = _this.getDiffPosition(position[0]);
+            const newValue = _this.getValueFromPosition(diffPosition);
+            _this.move(newValue);
+        };
+        _this.onKeyDown = (e)=>{
+            if (e.ctrlKey || e.shiftKey || e.altKey || e.metaKey) return;
+             // Prevent controlled updates from happening while a key is pressed
+            _this.setState({
+                pending: true
+            });
+            switch(e.key){
+                case "ArrowLeft":
+                case "ArrowDown":
+                case "Left":
+                case "Down":
+                    e.preventDefault();
+                    _this.moveDownByStep();
+                    break;
+                case "ArrowRight":
+                case "ArrowUp":
+                case "Right":
+                case "Up":
+                    e.preventDefault();
+                    _this.moveUpByStep();
+                    break;
+                case "Home":
+                    e.preventDefault();
+                    _this.move(_this.props.min);
+                    break;
+                case "End":
+                    e.preventDefault();
+                    _this.move(_this.props.max);
+                    break;
+                case "PageDown":
+                    e.preventDefault();
+                    _this.moveDownByStep(_this.props.pageFn(_this.props.step));
+                    break;
+                case "PageUp":
+                    e.preventDefault();
+                    _this.moveUpByStep(_this.props.pageFn(_this.props.step));
+                    break;
+            }
+        };
+        _this.onSliderMouseDown = (e)=>{
+            // do nothing if disabled or right click
+            if (_this.props.disabled || e.button === 2) return;
+             // Prevent controlled updates from happening while mouse is moving
+            _this.setState({
+                pending: true
+            });
+            if (!_this.props.snapDragDisabled) {
+                const position = _this.getMousePosition(e);
+                _this.forceValueFromPosition(position[0], (i)=>{
+                    _this.start(i, position[0]);
+                    addHandlers(_this.getMouseEventMap());
+                });
+            }
+            pauseEvent(e);
+        };
+        _this.onSliderClick = (e)=>{
+            if (_this.props.disabled) return;
+            if (_this.props.onSliderClick && !_this.hasMoved) {
+                const position = _this.getMousePosition(e);
+                const valueAtPos = trimAlignValue(_this.calcValue(_this.calcOffsetFromPosition(position[0])), _this.props);
+                _this.props.onSliderClick(valueAtPos);
+            }
+        };
+        _this.createOnKeyDown = (i)=>(e)=>{
+                if (_this.props.disabled) return;
+                _this.start(i);
+                addHandlers(_this.getKeyDownEventMap());
+                pauseEvent(e);
+            };
+        _this.createOnMouseDown = (i)=>(e)=>{
+                // do nothing if disabled or right click
+                if (_this.props.disabled || e.button === 2) return;
+                 // Prevent controlled updates from happending while mouse is moving
+                _this.setState({
+                    pending: true
+                });
+                const position = _this.getMousePosition(e);
+                _this.start(i, position[0]);
+                addHandlers(_this.getMouseEventMap());
+                pauseEvent(e);
+            };
+        _this.createOnTouchStart = (i)=>(e)=>{
+                if (_this.props.disabled || e.touches.length > 1) return;
+                 // Prevent controlled updates from happending while touch is moving
+                _this.setState({
+                    pending: true
+                });
+                const position = _this.getTouchPosition(e);
+                _this.startPosition = position; // don't know yet if the user is trying to scroll
+                _this.isScrolling = undefined;
+                _this.start(i, position[0]);
+                addHandlers(_this.getTouchEventMap());
+                stopPropagation(e);
+            };
+        _this.handleResize = ()=>{
+            // setTimeout of 0 gives element enough time to have assumed its new size if
+            // it is being resized
+            const resizeTimeout = window.setTimeout(()=>{
+                // drop this timeout from pendingResizeTimeouts to reduce memory usage
+                _this.pendingResizeTimeouts.shift();
+                _this.resize();
+            }, 0);
+            _this.pendingResizeTimeouts.push(resizeTimeout);
+        };
+        _this.renderThumb = (style, i)=>{
+            const className = _this.props.thumbClassName + " " + _this.props.thumbClassName + "-" + i + " " + (_this.state.index === i ? _this.props.thumbActiveClassName : "");
+            const props = {
+                "ref": (r)=>{
+                    _this["thumb" + i] = r;
+                },
+                "key": _this.props.thumbClassName + "-" + i,
+                className,
+                style,
+                "onMouseDown": _this.createOnMouseDown(i),
+                "onTouchStart": _this.createOnTouchStart(i),
+                "onFocus": _this.createOnKeyDown(i),
+                "tabIndex": 0,
+                "role": "slider",
+                "aria-orientation": _this.props.orientation,
+                "aria-valuenow": _this.state.value[i],
+                "aria-valuemin": _this.props.min,
+                "aria-valuemax": _this.props.max,
+                "aria-label": Array.isArray(_this.props.ariaLabel) ? _this.props.ariaLabel[i] : _this.props.ariaLabel,
+                "aria-labelledby": Array.isArray(_this.props.ariaLabelledby) ? _this.props.ariaLabelledby[i] : _this.props.ariaLabelledby,
+                "aria-disabled": _this.props.disabled
+            };
+            const state = {
+                index: i,
+                value: prepareOutValue(_this.state.value),
+                valueNow: _this.state.value[i]
+            };
+            if (_this.props.ariaValuetext) props["aria-valuetext"] = typeof _this.props.ariaValuetext === "string" ? _this.props.ariaValuetext : _this.props.ariaValuetext(state);
+            return _this.props.renderThumb(props, state);
+        };
+        _this.renderTrack = (i, offsetFrom, offsetTo)=>{
+            const props = {
+                key: _this.props.trackClassName + "-" + i,
+                className: _this.props.trackClassName + " " + _this.props.trackClassName + "-" + i,
+                style: _this.buildTrackStyle(offsetFrom, _this.state.upperBound - offsetTo)
+            };
+            const state = {
+                index: i,
+                value: prepareOutValue(_this.state.value)
+            };
+            return _this.props.renderTrack(props, state);
+        };
+        let value = sanitizeInValue(_props.value);
+        if (!value.length) value = sanitizeInValue(_props.defaultValue);
+         // array for storing resize timeouts ids
+        _this.pendingResizeTimeouts = [];
+        const zIndices = [];
+        for(let i = 0; i < value.length; i += 1){
+            value[i] = trimAlignValue(value[i], _props);
+            zIndices.push(i);
+        }
+        _this.resizeObserver = null;
+        _this.resizeElementRef = /*#__PURE__*/ React__default["default"].createRef();
+        _this.state = {
+            index: -1,
+            upperBound: 0,
+            sliderLength: 0,
+            value,
+            zIndices
+        };
+        return _this;
+    }
+    var _proto = ReactSlider.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+        if (typeof window !== "undefined") {
+            this.resizeObserver = new ResizeObserver(this.handleResize);
+            this.resizeObserver.observe(this.resizeElementRef.current);
+            this.resize();
+        }
+    } // Keep the internal `value` consistent with an outside `value` if present.
+    ;
+    ReactSlider.getDerivedStateFromProps = function getDerivedStateFromProps(props, state) {
+        const value = sanitizeInValue(props.value);
+        if (!value.length) return null;
+         // Do not allow controlled upates to happen while we have pending updates
+        if (state.pending) return null;
+        return {
+            value: value.map((item)=>trimAlignValue(item, props))
+        };
+    };
+    _proto.componentDidUpdate = function componentDidUpdate() {
+        // If an upperBound has not yet been determined (due to the component being hidden
+        // during the mount event, or during the last resize), then calculate it now
+        if (this.state.upperBound === 0) this.resize();
+    };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+        this.clearPendingResizeTimeouts();
+        if (this.resizeObserver) this.resizeObserver.disconnect();
+    };
+    _proto.onEnd = function onEnd(eventMap) {
+        if (eventMap) removeHandlers(eventMap);
+        if (this.hasMoved) this.fireChangeEvent("onAfterChange");
+         // Allow controlled updates to continue
+        this.setState({
+            pending: false
+        });
+        this.hasMoved = false;
+    };
+    _proto.getValue = function getValue() {
+        return prepareOutValue(this.state.value);
+    };
+    _proto.getClosestIndex = function getClosestIndex(pixelOffset) {
+        let minDist = Number.MAX_VALUE;
+        let closestIndex = -1;
+        const { value } = this.state;
+        const l = value.length;
+        for(let i = 0; i < l; i += 1){
+            const offset = this.calcOffset(value[i]);
+            const dist = Math.abs(pixelOffset - offset);
+            if (dist < minDist) {
+                minDist = dist;
+                closestIndex = i;
+            }
+        }
+        return closestIndex;
+    };
+    _proto.getMousePosition = function getMousePosition(e) {
+        return [
+            e["page" + this.axisKey()],
+            e["page" + this.orthogonalAxisKey()]
+        ];
+    };
+    _proto.getTouchPosition = function getTouchPosition(e) {
+        const touch = e.touches[0];
+        return [
+            touch["page" + this.axisKey()],
+            touch["page" + this.orthogonalAxisKey()]
+        ];
+    };
+    _proto.getKeyDownEventMap = function getKeyDownEventMap() {
+        return {
+            keydown: this.onKeyDown,
+            keyup: this.onKeyUp,
+            focusout: this.onBlur
+        };
+    };
+    _proto.getMouseEventMap = function getMouseEventMap() {
+        return {
+            mousemove: this.onMouseMove,
+            mouseup: this.onMouseUp
+        };
+    };
+    _proto.getTouchEventMap = function getTouchEventMap() {
+        return {
+            touchmove: this.onTouchMove,
+            touchend: this.onTouchEnd
+        };
+    };
+    _proto.getValueFromPosition = function getValueFromPosition(position) {
+        const diffValue = position / (this.state.sliderLength - this.state.thumbSize) * (this.props.max - this.props.min);
+        return trimAlignValue(this.state.startValue + diffValue, this.props);
+    };
+    _proto.getDiffPosition = function getDiffPosition(position) {
+        let diffPosition = position - this.state.startPosition;
+        if (this.props.invert) diffPosition *= -1;
+        return diffPosition;
+    } // create the `keydown` handler for the i-th thumb
+    ;
+    _proto.resize = function resize() {
+        const { slider, thumb0: thumb } = this;
+        if (!slider || !thumb) return;
+        const sizeKey = this.sizeKey(); // For the slider size, we want to use the client width/height, excluding any borders
+        const sliderRect = slider.getBoundingClientRect();
+        const sliderSize = slider[sizeKey];
+        const sliderMax = sliderRect[this.posMaxKey()];
+        const sliderMin = sliderRect[this.posMinKey()]; // For the thumb size, we want to use the outer width/height, including any borders
+        const thumbRect = thumb.getBoundingClientRect();
+        const thumbSize = thumbRect[sizeKey.replace("client", "").toLowerCase()];
+        const upperBound = sliderSize - thumbSize;
+        const sliderLength = Math.abs(sliderMax - sliderMin);
+        if (this.state.upperBound !== upperBound || this.state.sliderLength !== sliderLength || this.state.thumbSize !== thumbSize) this.setState({
+            upperBound,
+            sliderLength,
+            thumbSize
+        });
+    } // calculates the offset of a thumb in pixels based on its value.
+    ;
+    _proto.calcOffset = function calcOffset(value) {
+        const range = this.props.max - this.props.min;
+        if (range === 0) return 0;
+        const ratio = (value - this.props.min) / range;
+        return ratio * this.state.upperBound;
+    } // calculates the value corresponding to a given pixel offset, i.e. the inverse of `calcOffset`.
+    ;
+    _proto.calcValue = function calcValue(offset) {
+        const ratio = offset / this.state.upperBound;
+        return ratio * (this.props.max - this.props.min) + this.props.min;
+    };
+    _proto.calcOffsetFromPosition = function calcOffsetFromPosition(position) {
+        const { slider } = this;
+        const sliderRect = slider.getBoundingClientRect();
+        const sliderMax = sliderRect[this.posMaxKey()];
+        const sliderMin = sliderRect[this.posMinKey()]; // The `position` value passed in is the mouse position based on the window height.
+        // The slider bounding rect is based on the viewport, so we must add the window scroll
+        // offset to normalize the values.
+        const windowOffset = window["page" + this.axisKey() + "Offset"];
+        const sliderStart = windowOffset + (this.props.invert ? sliderMax : sliderMin);
+        let pixelOffset = position - sliderStart;
+        if (this.props.invert) pixelOffset = this.state.sliderLength - pixelOffset;
+        pixelOffset -= this.state.thumbSize / 2;
+        return pixelOffset;
+    } // Snaps the nearest thumb to the value corresponding to `position`
+    ;
+    _proto.forceValueFromPosition = function forceValueFromPosition(position, callback) {
+        const pixelOffset = this.calcOffsetFromPosition(position);
+        const closestIndex = this.getClosestIndex(pixelOffset);
+        const nextValue = trimAlignValue(this.calcValue(pixelOffset), this.props); // Clone this.state.value since we'll modify it temporarily
+        // eslint-disable-next-line zillow/react/no-access-state-in-setstate
+        const value = this.state.value.slice();
+        value[closestIndex] = nextValue; // Prevents the slider from shrinking below `props.minDistance`
+        for(let i = 0; i < value.length - 1; i += 1){
+            if (value[i + 1] - value[i] < this.props.minDistance) return;
+        }
+        this.fireChangeEvent("onBeforeChange");
+        this.hasMoved = true;
+        this.setState({
+            value
+        }, ()=>{
+            callback(closestIndex);
+            this.fireChangeEvent("onChange");
+        });
+    } // clear all pending timeouts to avoid error messages after unmounting
+    ;
+    _proto.clearPendingResizeTimeouts = function clearPendingResizeTimeouts() {
+        do {
+            const nextTimeout = this.pendingResizeTimeouts.shift();
+            clearTimeout(nextTimeout);
+        }while (this.pendingResizeTimeouts.length);
+    };
+    _proto.start = function start(i, position) {
+        const thumbRef = this["thumb" + i];
+        if (thumbRef) thumbRef.focus();
+        const { zIndices } = this.state; // remove wherever the element is
+        zIndices.splice(zIndices.indexOf(i), 1); // add to end
+        zIndices.push(i);
+        this.setState((prevState)=>({
+                startValue: prevState.value[i],
+                startPosition: position !== undefined ? position : prevState.startPosition,
+                index: i,
+                zIndices
+            }));
+    };
+    _proto.moveUpByStep = function moveUpByStep(step) {
+        if (step === void 0) step = this.props.step;
+        const oldValue = this.state.value[this.state.index]; // if the slider is inverted and horizontal we want to honor the inverted value
+        const newValue = this.props.invert && this.props.orientation === "horizontal" ? oldValue - step : oldValue + step;
+        const trimAlign = trimAlignValue(newValue, this.props);
+        this.move(Math.min(trimAlign, this.props.max));
+    };
+    _proto.moveDownByStep = function moveDownByStep(step) {
+        if (step === void 0) step = this.props.step;
+        const oldValue = this.state.value[this.state.index]; // if the slider is inverted and horizontal we want to honor the inverted value
+        const newValue = this.props.invert && this.props.orientation === "horizontal" ? oldValue + step : oldValue - step;
+        const trimAlign = trimAlignValue(newValue, this.props);
+        this.move(Math.max(trimAlign, this.props.min));
+    };
+    _proto.move = function move(newValue) {
+        // Clone this.state.value since we'll modify it temporarily
+        // eslint-disable-next-line zillow/react/no-access-state-in-setstate
+        const value = this.state.value.slice();
+        const { index } = this.state;
+        const { length } = value; // Short circuit if the value is not changing
+        const oldValue = value[index];
+        if (newValue === oldValue) return;
+         // Trigger only before the first movement
+        if (!this.hasMoved) this.fireChangeEvent("onBeforeChange");
+        this.hasMoved = true; // if "pearling" (= thumbs pushing each other) is disabled,
+        // prevent the thumb from getting closer than `minDistance` to the previous or next thumb.
+        const { pearling, max, min, minDistance } = this.props;
+        if (!pearling) {
+            if (index > 0) {
+                const valueBefore = value[index - 1];
+                if (newValue < valueBefore + minDistance) // eslint-disable-next-line no-param-reassign
+                newValue = valueBefore + minDistance;
+            }
+            if (index < length - 1) {
+                const valueAfter = value[index + 1];
+                if (newValue > valueAfter - minDistance) // eslint-disable-next-line no-param-reassign
+                newValue = valueAfter - minDistance;
+            }
+        }
+        value[index] = newValue; // if "pearling" is enabled, let the current thumb push the pre- and succeeding thumbs.
+        if (pearling && length > 1) {
+            if (newValue > oldValue) {
+                this.pushSucceeding(value, minDistance, index);
+                trimSucceeding(length, value, minDistance, max);
+            } else if (newValue < oldValue) {
+                this.pushPreceding(value, minDistance, index);
+                trimPreceding(length, value, minDistance, min);
+            }
+        } // Normally you would use `shouldComponentUpdate`,
+        // but since the slider is a low-level component,
+        // the extra complexity might be worth the extra performance.
+        this.setState({
+            value
+        }, this.fireChangeEvent.bind(this, "onChange"));
+    };
+    _proto.pushSucceeding = function pushSucceeding(value, minDistance, index) {
+        let i;
+        let padding;
+        for(i = index, padding = value[i] + minDistance; value[i + 1] !== null && padding > value[i + 1]; i += 1, padding = value[i] + minDistance)// eslint-disable-next-line no-param-reassign
+        value[i + 1] = alignValue(padding, this.props);
+    };
+    _proto.pushPreceding = function pushPreceding(value, minDistance, index) {
+        for(let i = index, padding = value[i] - minDistance; value[i - 1] !== null && padding < value[i - 1]; i -= 1, padding = value[i] - minDistance)// eslint-disable-next-line no-param-reassign
+        value[i - 1] = alignValue(padding, this.props);
+    };
+    _proto.axisKey = function axisKey() {
+        if (this.props.orientation === "vertical") return "Y";
+         // Defaults to 'horizontal';
+        return "X";
+    };
+    _proto.orthogonalAxisKey = function orthogonalAxisKey() {
+        if (this.props.orientation === "vertical") return "X";
+         // Defaults to 'horizontal'
+        return "Y";
+    };
+    _proto.posMinKey = function posMinKey() {
+        if (this.props.orientation === "vertical") return this.props.invert ? "bottom" : "top";
+         // Defaults to 'horizontal'
+        return this.props.invert ? "right" : "left";
+    };
+    _proto.posMaxKey = function posMaxKey() {
+        if (this.props.orientation === "vertical") return this.props.invert ? "top" : "bottom";
+         // Defaults to 'horizontal'
+        return this.props.invert ? "left" : "right";
+    };
+    _proto.sizeKey = function sizeKey() {
+        if (this.props.orientation === "vertical") return "clientHeight";
+         // Defaults to 'horizontal'
+        return "clientWidth";
+    };
+    _proto.fireChangeEvent = function fireChangeEvent(event) {
+        if (this.props[event]) this.props[event](prepareOutValue(this.state.value), this.state.index);
+    };
+    _proto.buildThumbStyle = function buildThumbStyle(offset, i) {
+        const style = {
+            position: "absolute",
+            touchAction: "none",
+            willChange: this.state.index >= 0 ? this.posMinKey() : undefined,
+            zIndex: this.state.zIndices.indexOf(i) + 1
+        };
+        style[this.posMinKey()] = offset + "px";
+        return style;
+    };
+    _proto.buildTrackStyle = function buildTrackStyle(min, max) {
+        const obj = {
+            position: "absolute",
+            willChange: this.state.index >= 0 ? this.posMinKey() + "," + this.posMaxKey() : undefined
+        };
+        obj[this.posMinKey()] = min;
+        obj[this.posMaxKey()] = max;
+        return obj;
+    };
+    _proto.buildMarkStyle = function buildMarkStyle(offset) {
+        var _ref;
+        return _ref = {
+            position: "absolute"
+        }, _ref[this.posMinKey()] = offset, _ref;
+    };
+    _proto.renderThumbs = function renderThumbs(offset) {
+        const { length } = offset;
+        const styles = [];
+        for(let i = 0; i < length; i += 1)styles[i] = this.buildThumbStyle(offset[i], i);
+        const res = [];
+        for(let i = 0; i < length; i += 1)res[i] = this.renderThumb(styles[i], i);
+        return res;
+    };
+    _proto.renderTracks = function renderTracks(offset) {
+        const tracks = [];
+        const lastIndex = offset.length - 1;
+        tracks.push(this.renderTrack(0, 0, offset[0]));
+        for(let i = 0; i < lastIndex; i += 1)tracks.push(this.renderTrack(i + 1, offset[i], offset[i + 1]));
+        tracks.push(this.renderTrack(lastIndex + 1, offset[lastIndex], this.state.upperBound));
+        return tracks;
+    };
+    _proto.renderMarks = function renderMarks() {
+        let { marks } = this.props;
+        const range = this.props.max - this.props.min + 1;
+        if (typeof marks === "boolean") marks = Array.from({
+            length: range
+        }).map((_, key)=>key);
+        else if (typeof marks === "number") marks = Array.from({
+            length: range
+        }).map((_, key)=>key).filter((key)=>key % marks === 0);
+        return marks.map(parseFloat).sort((a, b)=>a - b).map((mark)=>{
+            const offset = this.calcOffset(mark);
+            const props = {
+                key: mark,
+                className: this.props.markClassName,
+                style: this.buildMarkStyle(offset)
+            };
+            return this.props.renderMark(props);
+        });
+    };
+    _proto.render = function render() {
+        const offset = [];
+        const { value } = this.state;
+        const l = value.length;
+        for(let i = 0; i < l; i += 1)offset[i] = this.calcOffset(value[i], i);
+        const tracks = this.props.withTracks ? this.renderTracks(offset) : null;
+        const thumbs = this.renderThumbs(offset);
+        const marks = this.props.marks ? this.renderMarks() : null;
+        return /*#__PURE__*/ React__default["default"].createElement("div", {
+            ref: (r)=>{
+                this.slider = r;
+                this.resizeElementRef.current = r;
+            },
+            style: {
+                position: "relative"
+            },
+            className: this.props.className + (this.props.disabled ? " disabled" : ""),
+            onMouseDown: this.onSliderMouseDown,
+            onClick: this.onSliderClick
+        }, tracks, thumbs, marks);
+    };
+    return ReactSlider;
+}(React__default["default"].Component);
+ReactSlider.displayName = "ReactSlider";
+ReactSlider.defaultProps = {
+    min: 0,
+    max: 100,
+    step: 1,
+    pageFn: (step)=>step * 10,
+    minDistance: 0,
+    defaultValue: 0,
+    orientation: "horizontal",
+    className: "slider",
+    thumbClassName: "thumb",
+    thumbActiveClassName: "active",
+    trackClassName: "track",
+    markClassName: "mark",
+    withTracks: true,
+    pearling: false,
+    disabled: false,
+    snapDragDisabled: false,
+    invert: false,
+    marks: [],
+    renderThumb: (props)=>/*#__PURE__*/ React__default["default"].createElement("div", _extends__default["default"]({}, props, {
+            __self: ReactSlider,
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 353,
+                columnNumber: 31
+            }
+        })),
+    renderTrack: (props)=>/*#__PURE__*/ React__default["default"].createElement("div", _extends__default["default"]({}, props, {
+            __self: ReactSlider,
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 354,
+                columnNumber: 31
+            }
+        })),
+    renderMark: (props)=>/*#__PURE__*/ React__default["default"].createElement("span", _extends__default["default"]({}, props, {
+            __self: ReactSlider,
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 355,
+                columnNumber: 30
+            }
+        }))
+};
+ReactSlider.propTypes = {
+    /**
+   * The minimum value of the slider.
+   */ min: PropTypes__default["default"].number,
+    /**
+   * The maximum value of the slider.
+   */ max: PropTypes__default["default"].number,
+    /**
+   * Value to be added or subtracted on each step the slider makes.
+   * Must be greater than zero.
+   * `max - min` should be evenly divisible by the step value.
+   */ step: PropTypes__default["default"].number,
+    /**
+   * The result of the function is the value to be added or subtracted
+   * when the `Page Up` or `Page Down` keys are pressed.
+   *
+   * The current `step` value will be passed as the only argument.
+   * By default, paging will modify `step` by a factor of 10.
+   */ pageFn: PropTypes__default["default"].func,
+    /**
+   * The minimal distance between any pair of thumbs.
+   * Must be positive, but zero means they can sit on top of each other.
+   */ minDistance: PropTypes__default["default"].number,
+    /**
+   * Determines the initial positions of the thumbs and the number of thumbs.
+   *
+   * If a number is passed a slider with one thumb will be rendered.
+   * If an array is passed each value will determine the position of one thumb.
+   * The values in the array must be sorted.
+   */ defaultValue: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].number,
+        PropTypes__default["default"].arrayOf(PropTypes__default["default"].number)
+    ]),
+    /**
+   * Like `defaultValue` but for
+   * [controlled components](http://facebook.github.io/react/docs/forms.html#controlled-components).
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    value: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].number,
+        PropTypes__default["default"].arrayOf(PropTypes__default["default"].number)
+    ]),
+    /**
+   * Determines whether the slider moves horizontally (from left to right)
+   * or vertically (from top to bottom).
+   */ orientation: PropTypes__default["default"].oneOf([
+        "horizontal",
+        "vertical"
+    ]),
+    /**
+   * The css class set on the slider node.
+   */ className: PropTypes__default["default"].string,
+    /**
+   * The css class set on each thumb node.
+   *
+   * In addition each thumb will receive a numbered css class of the form
+   * `${thumbClassName}-${i}`, e.g. `thumb-0`, `thumb-1`, ...
+   */ thumbClassName: PropTypes__default["default"].string,
+    /**
+   * The css class set on the thumb that is currently being moved.
+   */ thumbActiveClassName: PropTypes__default["default"].string,
+    /**
+   * If `true` tracks between the thumbs will be rendered.
+   */ withTracks: PropTypes__default["default"].bool,
+    /**
+   * The css class set on the tracks between the thumbs.
+   * In addition track fragment will receive a numbered css class of the form
+   * `${trackClassName}-${i}`, e.g. `track-0`, `track-1`, ...
+   */ trackClassName: PropTypes__default["default"].string,
+    /**
+   * If `true` the active thumb will push other thumbs
+   * within the constraints of `min`, `max`, `step` and `minDistance`.
+   */ pearling: PropTypes__default["default"].bool,
+    /**
+   * If `true` the thumbs can't be moved.
+   */ disabled: PropTypes__default["default"].bool,
+    /**
+   * Disables thumb move when clicking the slider track
+   */ snapDragDisabled: PropTypes__default["default"].bool,
+    /**
+   * Inverts the slider.
+   */ invert: PropTypes__default["default"].bool,
+    /**
+   * Shows passed marks on the track, if true it shows all the marks,
+   * if an array of numbers it shows just the passed marks, if a number is passed
+   * it shows just the marks in that steps: like passing 3 shows the marks 3, 6, 9
+   */ marks: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].arrayOf(PropTypes__default["default"].number),
+        PropTypes__default["default"].bool,
+        PropTypes__default["default"].number
+    ]),
+    /**
+   * The css class set on the marks.
+   */ markClassName: PropTypes__default["default"].string,
+    /**
+   * Callback called before starting to move a thumb. The callback will only be called if the
+   * action will result in a change. The function will be called with two arguments, the first
+   * being the initial value(s) the second being thumb index.
+   */ // eslint-disable-next-line max-len
+    // eslint-disable-next-line zillow/react/require-default-props, zillow/react/no-unused-prop-types
+    onBeforeChange: PropTypes__default["default"].func,
+    /**
+   * Callback called on every value change.
+   * The function will be called with two arguments, the first being the new value(s)
+   * the second being thumb index.
+   */ // eslint-disable-next-line max-len
+    // eslint-disable-next-line zillow/react/require-default-props, zillow/react/no-unused-prop-types
+    onChange: PropTypes__default["default"].func,
+    /**
+   * Callback called only after moving a thumb has ended. The callback will only be called if
+   * the action resulted in a change. The function will be called with two arguments, the
+   * first being the result value(s) the second being thumb index.
+   */ // eslint-disable-next-line max-len
+    // eslint-disable-next-line zillow/react/require-default-props, zillow/react/no-unused-prop-types
+    onAfterChange: PropTypes__default["default"].func,
+    /**
+   * Callback called when the the slider is clicked (thumb or tracks).
+   * Receives the value at the clicked position as argument.
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    onSliderClick: PropTypes__default["default"].func,
+    /**
+   * aria-label for screen-readers to apply to the thumbs.
+   * Use an array for more than one thumb.
+   * The length of the array must match the number of thumbs in the value array.
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    ariaLabel: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].string,
+        PropTypes__default["default"].arrayOf(PropTypes__default["default"].string)
+    ]),
+    /**
+   * aria-labelledby for screen-readers to apply to the thumbs.
+   * Used when slider rendered with separate label.
+   * Use an array for more than one thumb.
+   * The length of the array must match the number of thumbs in the value array.
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    ariaLabelledby: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].string,
+        PropTypes__default["default"].arrayOf(PropTypes__default["default"].string)
+    ]),
+    /**
+   * aria-valuetext for screen-readers.
+   * Can be a static string, or a function that returns a string.
+   * The function will be passed a single argument,
+   * an object with the following properties:
+   *
+   *     state => `Value: ${state.value}`
+   *
+   * - `state.index` {`number`} the index of the thumb
+   * - `state.value` {`number` | `array`} the current value state
+   * - `state.valueNow` {`number`} the value of the thumb (i.e. aria-valuenow)
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    ariaValuetext: PropTypes__default["default"].oneOfType([
+        PropTypes__default["default"].string,
+        PropTypes__default["default"].func
+    ]),
+    /**
+   * Provide a custom render function for the track node.
+   * The render function will be passed two arguments,
+   * an object with props that should be added to your handle node,
+   * and an object with track and slider state:
+   *
+   *     (props, state) => <div {...props} />
+   *
+   * - `props` {`object`} props to be spread into your track node
+   * - `state.index` {`number`} the index of the track
+   * - `state.value` {`number` | `array`} the current value state
+   */ renderTrack: PropTypes__default["default"].func,
+    /**
+   * Provide a custom render function for dynamic thumb content.
+   * The render function will be passed two arguments,
+   * an object with props that should be added to your thumb node,
+   * and an object with thumb and slider state:
+   *
+   *     (props, state) => <div {...props} />
+   *
+   * - `props` {`object`} props to be spread into your thumb node
+   * - `state.index` {`number`} the index of the thumb
+   * - `state.value` {`number` | `array`} the current value state
+   * - `state.valueNow` {`number`} the value of the thumb (i.e. aria-valuenow)
+   */ // eslint-disable-next-line zillow/react/require-default-props
+    renderThumb: PropTypes__default["default"].func,
+    /**
+   * Provide a custom render function for the mark node.
+   * The render function will be passed one argument,
+   * an object with props that should be added to your handle node
+   *
+   *     (props) => <span {...props} />
+   *
+   * - `props` {`object`} props to be spread into your track node
+   */ renderMark: PropTypes__default["default"].func
+};
+var ReactSlider$1 = ReactSlider;
+exports["default"] = ReactSlider$1;
+
+},{"8a552d149b4312f4":"vw3vn","309e490f93094608":"bfCya","5ba8bab241d8d742":"21dqq","90dd09781b5131d8":"7wKI2"}],"vw3vn":[function(require,module,exports) {
+var _Object$assign = require("f096df882c518f01");
+function _extends() {
+    module.exports = _extends = _Object$assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+module.exports = _extends;
+
+},{"f096df882c518f01":"g9ltF"}],"g9ltF":[function(require,module,exports) {
+module.exports = require("fb9d14429650271");
+
+},{"fb9d14429650271":"8KSwm"}],"8KSwm":[function(require,module,exports) {
+require("499732afec0c6473");
+module.exports = require("e33f8ad42e6e7415").Object.assign;
+
+},{"499732afec0c6473":"fnPov","e33f8ad42e6e7415":"hthrp"}],"fnPov":[function(require,module,exports) {
+// 19.1.3.1 Object.assign(target, source)
+var $export = require("4587991bf938f407");
+$export($export.S + $export.F, "Object", {
+    assign: require("53844b2e03297d21")
+});
+
+},{"4587991bf938f407":"gwTsq","53844b2e03297d21":"25Y15"}],"gwTsq":[function(require,module,exports) {
+var global = require("280d898477400d74");
+var core = require("675cdc75da15c6cc");
+var ctx = require("b3e02d951b36329c");
+var hide = require("ddc23a3c61502858");
+var has = require("918e8739fa09f494");
+var PROTOTYPE = "prototype";
+var $export = function(type, name, source) {
+    var IS_FORCED = type & $export.F;
+    var IS_GLOBAL = type & $export.G;
+    var IS_STATIC = type & $export.S;
+    var IS_PROTO = type & $export.P;
+    var IS_BIND = type & $export.B;
+    var IS_WRAP = type & $export.W;
+    var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+    var expProto = exports[PROTOTYPE];
+    var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
+    var key, own, out;
+    if (IS_GLOBAL) source = name;
+    for(key in source){
+        // contains in native
+        own = !IS_FORCED && target && target[key] !== undefined;
+        if (own && has(exports, key)) continue;
+        // export native or passed
+        out = own ? target[key] : source[key];
+        // prevent global pollution for namespaces
+        exports[key] = IS_GLOBAL && typeof target[key] != "function" ? source[key] : IS_BIND && own ? ctx(out, global) : IS_WRAP && target[key] == out ? function(C) {
+            var F = function(a, b, c) {
+                if (this instanceof C) {
+                    switch(arguments.length){
+                        case 0:
+                            return new C();
+                        case 1:
+                            return new C(a);
+                        case 2:
+                            return new C(a, b);
+                    }
+                    return new C(a, b, c);
+                }
+                return C.apply(this, arguments);
+            };
+            F[PROTOTYPE] = C[PROTOTYPE];
+            return F;
+        // make static versions for prototype methods
+        }(out) : IS_PROTO && typeof out == "function" ? ctx(Function.call, out) : out;
+        // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+        if (IS_PROTO) {
+            (exports.virtual || (exports.virtual = {}))[key] = out;
+            // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+            if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
+        }
+    }
+};
+// type bitmap
+$export.F = 1; // forced
+$export.G = 2; // global
+$export.S = 4; // static
+$export.P = 8; // proto
+$export.B = 16; // bind
+$export.W = 32; // wrap
+$export.U = 64; // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+},{"280d898477400d74":"3Oj2u","675cdc75da15c6cc":"hthrp","b3e02d951b36329c":"7rPfq","ddc23a3c61502858":"gmT3z","918e8739fa09f494":"e6RUY"}],"3Oj2u":[function(require,module,exports) {
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != "undefined" && window.Math == Math ? window : typeof self != "undefined" && self.Math == Math ? self : Function("return this")();
+if (typeof __g == "number") __g = global; // eslint-disable-line no-undef
+
+},{}],"hthrp":[function(require,module,exports) {
+var core = module.exports = {
+    version: "2.6.12"
+};
+if (typeof __e == "number") __e = core; // eslint-disable-line no-undef
+
+},{}],"7rPfq":[function(require,module,exports) {
+// optional / simple context binding
+var aFunction = require("c33d1bc3a4957666");
+module.exports = function(fn, that, length) {
+    aFunction(fn);
+    if (that === undefined) return fn;
+    switch(length){
+        case 1:
+            return function(a) {
+                return fn.call(that, a);
+            };
+        case 2:
+            return function(a, b) {
+                return fn.call(that, a, b);
+            };
+        case 3:
+            return function(a, b, c) {
+                return fn.call(that, a, b, c);
+            };
+    }
+    return function() {
+        return fn.apply(that, arguments);
+    };
+};
+
+},{"c33d1bc3a4957666":"c3Iin"}],"c3Iin":[function(require,module,exports) {
+module.exports = function(it) {
+    if (typeof it != "function") throw TypeError(it + " is not a function!");
+    return it;
+};
+
+},{}],"gmT3z":[function(require,module,exports) {
+var dP = require("b50b81010811f779");
+var createDesc = require("6ae41bf95c963be1");
+module.exports = require("aca69a30f8d97bbf") ? function(object, key, value) {
+    return dP.f(object, key, createDesc(1, value));
+} : function(object, key, value) {
+    object[key] = value;
+    return object;
+};
+
+},{"b50b81010811f779":"7oxIl","6ae41bf95c963be1":"dmVmZ","aca69a30f8d97bbf":"jxsfR"}],"7oxIl":[function(require,module,exports) {
+var anObject = require("39c1614979b2c200");
+var IE8_DOM_DEFINE = require("81b6a1862b6bb3f4");
+var toPrimitive = require("23225402685cd00b");
+var dP = Object.defineProperty;
+exports.f = require("e768d3f130c18468") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+    anObject(O);
+    P = toPrimitive(P, true);
+    anObject(Attributes);
+    if (IE8_DOM_DEFINE) try {
+        return dP(O, P, Attributes);
+    } catch (e) {}
+    if ("get" in Attributes || "set" in Attributes) throw TypeError("Accessors not supported!");
+    if ("value" in Attributes) O[P] = Attributes.value;
+    return O;
+};
+
+},{"39c1614979b2c200":"7CErr","81b6a1862b6bb3f4":"8kkSV","23225402685cd00b":"kAQVK","e768d3f130c18468":"jxsfR"}],"7CErr":[function(require,module,exports) {
+var isObject = require("d1fa6c6d718b2af0");
+module.exports = function(it) {
+    if (!isObject(it)) throw TypeError(it + " is not an object!");
+    return it;
+};
+
+},{"d1fa6c6d718b2af0":"6EXcp"}],"6EXcp":[function(require,module,exports) {
+module.exports = function(it) {
+    return typeof it === "object" ? it !== null : typeof it === "function";
+};
+
+},{}],"8kkSV":[function(require,module,exports) {
+module.exports = !require("25e39c96b485a2d4") && !require("841f8f7344d52e3c")(function() {
+    return Object.defineProperty(require("26ea8bab98f45102")("div"), "a", {
+        get: function() {
+            return 7;
+        }
+    }).a != 7;
+});
+
+},{"25e39c96b485a2d4":"jxsfR","841f8f7344d52e3c":"lCl2A","26ea8bab98f45102":"ibxgc"}],"jxsfR":[function(require,module,exports) {
+// Thank's IE8 for his funny defineProperty
+module.exports = !require("384e64392289cbf0")(function() {
+    return Object.defineProperty({}, "a", {
+        get: function() {
+            return 7;
+        }
+    }).a != 7;
+});
+
+},{"384e64392289cbf0":"lCl2A"}],"lCl2A":[function(require,module,exports) {
+module.exports = function(exec) {
+    try {
+        return !!exec();
+    } catch (e) {
+        return true;
+    }
+};
+
+},{}],"ibxgc":[function(require,module,exports) {
+var isObject = require("1c4f66d669be867c");
+var document = require("382f8de20d058e56").document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function(it) {
+    return is ? document.createElement(it) : {};
+};
+
+},{"1c4f66d669be867c":"6EXcp","382f8de20d058e56":"3Oj2u"}],"kAQVK":[function(require,module,exports) {
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = require("bdd1a0adae2b9200");
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function(it, S) {
+    if (!isObject(it)) return it;
+    var fn, val;
+    if (S && typeof (fn = it.toString) == "function" && !isObject(val = fn.call(it))) return val;
+    if (typeof (fn = it.valueOf) == "function" && !isObject(val = fn.call(it))) return val;
+    if (!S && typeof (fn = it.toString) == "function" && !isObject(val = fn.call(it))) return val;
+    throw TypeError("Can't convert object to primitive value");
+};
+
+},{"bdd1a0adae2b9200":"6EXcp"}],"dmVmZ":[function(require,module,exports) {
+module.exports = function(bitmap, value) {
+    return {
+        enumerable: !(bitmap & 1),
+        configurable: !(bitmap & 2),
+        writable: !(bitmap & 4),
+        value: value
+    };
+};
+
+},{}],"e6RUY":[function(require,module,exports) {
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function(it, key) {
+    return hasOwnProperty.call(it, key);
+};
+
+},{}],"25Y15":[function(require,module,exports) {
+"use strict";
+// 19.1.2.1 Object.assign(target, source, ...)
+var DESCRIPTORS = require("610643f9a7e845fd");
+var getKeys = require("a6919a51acee1f44");
+var gOPS = require("b8228437cef56ad1");
+var pIE = require("d1effcc7f65e2eb9");
+var toObject = require("ccff939573ec7392");
+var IObject = require("eb5596891e1c7297");
+var $assign = Object.assign;
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || require("4776b0ffe2bd33b4")(function() {
+    var A = {};
+    var B = {};
+    // eslint-disable-next-line no-undef
+    var S = Symbol();
+    var K = "abcdefghijklmnopqrst";
+    A[S] = 7;
+    K.split("").forEach(function(k) {
+        B[k] = k;
+    });
+    return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join("") != K;
+}) ? function assign(target, source) {
+    var T = toObject(target);
+    var aLen = arguments.length;
+    var index = 1;
+    var getSymbols = gOPS.f;
+    var isEnum = pIE.f;
+    while(aLen > index){
+        var S = IObject(arguments[index++]);
+        var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+        var length = keys.length;
+        var j = 0;
+        var key;
+        while(length > j){
+            key = keys[j++];
+            if (!DESCRIPTORS || isEnum.call(S, key)) T[key] = S[key];
+        }
+    }
+    return T;
+} : $assign;
+
+},{"610643f9a7e845fd":"jxsfR","a6919a51acee1f44":"49Ud8","b8228437cef56ad1":"jMWtb","d1effcc7f65e2eb9":"iRQjx","ccff939573ec7392":"b3Y3Z","eb5596891e1c7297":"4yBC7","4776b0ffe2bd33b4":"lCl2A"}],"49Ud8":[function(require,module,exports) {
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = require("83bf1dd0ae7b0622");
+var enumBugKeys = require("aa7e0a358876d00c");
+module.exports = Object.keys || function keys(O) {
+    return $keys(O, enumBugKeys);
+};
+
+},{"83bf1dd0ae7b0622":"2rNY7","aa7e0a358876d00c":"jUdvY"}],"2rNY7":[function(require,module,exports) {
+var has = require("19f1433d756f3251");
+var toIObject = require("4626991d72c1fcd");
+var arrayIndexOf = require("f81292748a921fda")(false);
+var IE_PROTO = require("349910d3215930c1")("IE_PROTO");
+module.exports = function(object, names) {
+    var O = toIObject(object);
+    var i = 0;
+    var result = [];
+    var key;
+    for(key in O)if (key != IE_PROTO) has(O, key) && result.push(key);
+    // Don't enum bug & hidden keys
+    while(names.length > i)if (has(O, key = names[i++])) ~arrayIndexOf(result, key) || result.push(key);
+    return result;
+};
+
+},{"19f1433d756f3251":"e6RUY","4626991d72c1fcd":"2srcq","f81292748a921fda":"eZrld","349910d3215930c1":"f9A1D"}],"2srcq":[function(require,module,exports) {
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = require("76ab360111d1d2d9");
+var defined = require("c62d0cb871c23bd7");
+module.exports = function(it) {
+    return IObject(defined(it));
+};
+
+},{"76ab360111d1d2d9":"4yBC7","c62d0cb871c23bd7":"doqrk"}],"4yBC7":[function(require,module,exports) {
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = require("10557191e79a9200");
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object("z").propertyIsEnumerable(0) ? Object : function(it) {
+    return cof(it) == "String" ? it.split("") : Object(it);
+};
+
+},{"10557191e79a9200":"5KK9s"}],"5KK9s":[function(require,module,exports) {
+var toString = {}.toString;
+module.exports = function(it) {
+    return toString.call(it).slice(8, -1);
+};
+
+},{}],"doqrk":[function(require,module,exports) {
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function(it) {
+    if (it == undefined) throw TypeError("Can't call method on  " + it);
+    return it;
+};
+
+},{}],"eZrld":[function(require,module,exports) {
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = require("4aaea5637bd59385");
+var toLength = require("2044469173066fde");
+var toAbsoluteIndex = require("f86a3a55c2aa7910");
+module.exports = function(IS_INCLUDES) {
+    return function($this, el, fromIndex) {
+        var O = toIObject($this);
+        var length = toLength(O.length);
+        var index = toAbsoluteIndex(fromIndex, length);
+        var value;
+        // Array#includes uses SameValueZero equality algorithm
+        // eslint-disable-next-line no-self-compare
+        if (IS_INCLUDES && el != el) while(length > index){
+            value = O[index++];
+            // eslint-disable-next-line no-self-compare
+            if (value != value) return true;
+        // Array#indexOf ignores holes, Array#includes - not
+        }
+        else for(; length > index; index++)if (IS_INCLUDES || index in O) {
+            if (O[index] === el) return IS_INCLUDES || index || 0;
+        }
+        return !IS_INCLUDES && -1;
+    };
+};
+
+},{"4aaea5637bd59385":"2srcq","2044469173066fde":"hojM5","f86a3a55c2aa7910":"2OyuF"}],"hojM5":[function(require,module,exports) {
+// 7.1.15 ToLength
+var toInteger = require("d63df52ef85f45a2");
+var min = Math.min;
+module.exports = function(it) {
+    return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+},{"d63df52ef85f45a2":"9aNgx"}],"9aNgx":[function(require,module,exports) {
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function(it) {
+    return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+},{}],"2OyuF":[function(require,module,exports) {
+var toInteger = require("75f147d516ea7b5e");
+var max = Math.max;
+var min = Math.min;
+module.exports = function(index, length) {
+    index = toInteger(index);
+    return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+},{"75f147d516ea7b5e":"9aNgx"}],"f9A1D":[function(require,module,exports) {
+var shared = require("18917a110413abfe")("keys");
+var uid = require("c3184fd773e126e");
+module.exports = function(key) {
+    return shared[key] || (shared[key] = uid(key));
+};
+
+},{"18917a110413abfe":"faluf","c3184fd773e126e":"iIUz7"}],"faluf":[function(require,module,exports) {
+var core = require("443054df79395d0d");
+var global = require("1aebfd1372ec9222");
+var SHARED = "__core-js_shared__";
+var store = global[SHARED] || (global[SHARED] = {});
+(module.exports = function(key, value) {
+    return store[key] || (store[key] = value !== undefined ? value : {});
+})("versions", []).push({
+    version: core.version,
+    mode: require("16256dc5906d6b84") ? "pure" : "global",
+    copyright: "\xa9 2020 Denis Pushkarev (zloirock.ru)"
+});
+
+},{"443054df79395d0d":"hthrp","1aebfd1372ec9222":"3Oj2u","16256dc5906d6b84":"3hH9R"}],"3hH9R":[function(require,module,exports) {
+module.exports = true;
+
+},{}],"iIUz7":[function(require,module,exports) {
+var id = 0;
+var px = Math.random();
+module.exports = function(key) {
+    return "Symbol(".concat(key === undefined ? "" : key, ")_", (++id + px).toString(36));
+};
+
+},{}],"jUdvY":[function(require,module,exports) {
+// IE 8- don't enum bug keys
+module.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
+
+},{}],"jMWtb":[function(require,module,exports) {
+exports.f = Object.getOwnPropertySymbols;
+
+},{}],"iRQjx":[function(require,module,exports) {
+exports.f = ({}).propertyIsEnumerable;
+
+},{}],"b3Y3Z":[function(require,module,exports) {
+// 7.1.13 ToObject(argument)
+var defined = require("b3a9e0e833d52b9f");
+module.exports = function(it) {
+    return Object(defined(it));
+};
+
+},{"b3a9e0e833d52b9f":"doqrk"}],"bfCya":[function(require,module,exports) {
+var _Object$create = require("b26054262c07336d");
+function _inheritsLoose(subClass, superClass) {
+    subClass.prototype = _Object$create(superClass.prototype);
+    subClass.prototype.constructor = subClass;
+    subClass.__proto__ = superClass;
+}
+module.exports = _inheritsLoose;
+
+},{"b26054262c07336d":"CpffX"}],"CpffX":[function(require,module,exports) {
+module.exports = require("895b6015de72129d");
+
+},{"895b6015de72129d":"jz7pU"}],"jz7pU":[function(require,module,exports) {
+require("202e191d1c041267");
+var $Object = require("3180939eee2969b").Object;
+module.exports = function create(P, D) {
+    return $Object.create(P, D);
+};
+
+},{"202e191d1c041267":"3HqI5","3180939eee2969b":"hthrp"}],"3HqI5":[function(require,module,exports) {
+var $export = require("b4bf3a0491dad02b");
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+$export($export.S, "Object", {
+    create: require("5e1a510df2752b8e")
+});
+
+},{"b4bf3a0491dad02b":"gwTsq","5e1a510df2752b8e":"9T5lC"}],"9T5lC":[function(require,module,exports) {
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = require("1fa61a504d40b972");
+var dPs = require("76cf3eba6ddc81d1");
+var enumBugKeys = require("39d51ebc5541e860");
+var IE_PROTO = require("2b78440fa37f8a95")("IE_PROTO");
+var Empty = function() {};
+var PROTOTYPE = "prototype";
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function() {
+    // Thrash, waste and sodomy: IE GC bug
+    var iframe = require("8e35574987124799")("iframe");
+    var i = enumBugKeys.length;
+    var lt = "<";
+    var gt = ">";
+    var iframeDocument;
+    iframe.style.display = "none";
+    require("c37e267ee3dbf715").appendChild(iframe);
+    iframe.src = "javascript:"; // eslint-disable-line no-script-url
+    // createDict = iframe.contentWindow.Object;
+    // html.removeChild(iframe);
+    iframeDocument = iframe.contentWindow.document;
+    iframeDocument.open();
+    iframeDocument.write(lt + "script" + gt + "document.F=Object" + lt + "/script" + gt);
+    iframeDocument.close();
+    createDict = iframeDocument.F;
+    while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
+    return createDict();
+};
+module.exports = Object.create || function create(O, Properties) {
+    var result;
+    if (O !== null) {
+        Empty[PROTOTYPE] = anObject(O);
+        result = new Empty();
+        Empty[PROTOTYPE] = null;
+        // add "__proto__" for Object.getPrototypeOf polyfill
+        result[IE_PROTO] = O;
+    } else result = createDict();
+    return Properties === undefined ? result : dPs(result, Properties);
+};
+
+},{"1fa61a504d40b972":"7CErr","76cf3eba6ddc81d1":"4ujfv","39d51ebc5541e860":"jUdvY","2b78440fa37f8a95":"f9A1D","8e35574987124799":"ibxgc","c37e267ee3dbf715":"7Oh7V"}],"4ujfv":[function(require,module,exports) {
+var dP = require("b29612eb3fb18115");
+var anObject = require("568312fac5f26994");
+var getKeys = require("c34773372ab2df59");
+module.exports = require("37f8dcade3828c33") ? Object.defineProperties : function defineProperties(O, Properties) {
+    anObject(O);
+    var keys = getKeys(Properties);
+    var length = keys.length;
+    var i = 0;
+    var P;
+    while(length > i)dP.f(O, P = keys[i++], Properties[P]);
+    return O;
+};
+
+},{"b29612eb3fb18115":"7oxIl","568312fac5f26994":"7CErr","c34773372ab2df59":"49Ud8","37f8dcade3828c33":"jxsfR"}],"7Oh7V":[function(require,module,exports) {
+var document = require("921a406e1fdd4e6a").document;
+module.exports = document && document.documentElement;
+
+},{"921a406e1fdd4e6a":"3Oj2u"}],"7wKI2":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ var ReactIs = require("96e34ae03f5a2631");
+// By explicitly using `prop-types` you are opting into new development behavior.
+// http://fb.me/prop-types-in-prod
+var throwOnDirectAccess = true;
+module.exports = require("cb216452e2171041")(ReactIs.isElement, throwOnDirectAccess);
+
+},{"96e34ae03f5a2631":"7EuwB","cb216452e2171041":"bBUgD"}],"7EuwB":[function(require,module,exports) {
+"use strict";
+module.exports = require("2255125a8e8b1051");
+
+},{"2255125a8e8b1051":"5DsXl"}],"5DsXl":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    "use strict";
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === "function" && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for("react.element") : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for("react.portal") : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for("react.fragment") : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for("react.strict_mode") : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for("react.profiler") : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for("react.provider") : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for("react.context") : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for("react.async_mode") : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for("react.concurrent_mode") : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for("react.forward_ref") : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for("react.suspense") : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for("react.suspense_list") : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for("react.memo") : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for("react.lazy") : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for("react.block") : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for("react.fundamental") : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for("react.responder") : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for("react.scope") : 0xead7;
+    function isValidElementType(type) {
+        return typeof type === "string" || typeof type === "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === "object" && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function typeOf(object) {
+        if (typeof object === "object" && object !== null) {
+            var $$typeof = object.$$typeof;
+            switch($$typeof){
+                case REACT_ELEMENT_TYPE:
+                    var type = object.type;
+                    switch(type){
+                        case REACT_ASYNC_MODE_TYPE:
+                        case REACT_CONCURRENT_MODE_TYPE:
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                            return type;
+                        default:
+                            var $$typeofType = type && type.$$typeof;
+                            switch($$typeofType){
+                                case REACT_CONTEXT_TYPE:
+                                case REACT_FORWARD_REF_TYPE:
+                                case REACT_LAZY_TYPE:
+                                case REACT_MEMO_TYPE:
+                                case REACT_PROVIDER_TYPE:
+                                    return $$typeofType;
+                                default:
+                                    return $$typeof;
+                            }
+                    }
+                case REACT_PORTAL_TYPE:
+                    return $$typeof;
+            }
+        }
+        return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.");
+        }
+        return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+    function isConcurrentMode(object) {
+        return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+    function isContextConsumer(object) {
+        return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+        return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+        return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+        return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+        return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+        return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+        return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+        return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+        return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+        return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+})();
+
+},{}],"bBUgD":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactIs = require("c437388b089702c3");
+var assign = require("c067a60101d8520c");
+var ReactPropTypesSecret = require("74a0f89a70b9f3c2");
+var has = require("18441b11647bc78");
+var checkPropTypes = require("bec3f6ff89f0b072");
+var printWarning = function() {};
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+function emptyFunctionThatReturnsNull() {
+    return null;
+}
+module.exports = function(isValidElement, throwOnDirectAccess) {
+    /* global Symbol */ var ITERATOR_SYMBOL = typeof Symbol === "function" && Symbol.iterator;
+    var FAUX_ITERATOR_SYMBOL = "@@iterator"; // Before Symbol spec.
+    /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */ function getIteratorFn(maybeIterable) {
+        var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+        if (typeof iteratorFn === "function") return iteratorFn;
+    }
+    /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */ var ANONYMOUS = "<<anonymous>>";
+    // Important!
+    // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+    var ReactPropTypes = {
+        array: createPrimitiveTypeChecker("array"),
+        bigint: createPrimitiveTypeChecker("bigint"),
+        bool: createPrimitiveTypeChecker("boolean"),
+        func: createPrimitiveTypeChecker("function"),
+        number: createPrimitiveTypeChecker("number"),
+        object: createPrimitiveTypeChecker("object"),
+        string: createPrimitiveTypeChecker("string"),
+        symbol: createPrimitiveTypeChecker("symbol"),
+        any: createAnyTypeChecker(),
+        arrayOf: createArrayOfTypeChecker,
+        element: createElementTypeChecker(),
+        elementType: createElementTypeTypeChecker(),
+        instanceOf: createInstanceTypeChecker,
+        node: createNodeChecker(),
+        objectOf: createObjectOfTypeChecker,
+        oneOf: createEnumTypeChecker,
+        oneOfType: createUnionTypeChecker,
+        shape: createShapeTypeChecker,
+        exact: createStrictShapeTypeChecker
+    };
+    /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */ /*eslint-disable no-self-compare*/ function is(x, y) {
+        // SameValue algorithm
+        if (x === y) // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+        else // Step 6.a: NaN == NaN
+        return x !== x && y !== y;
+    }
+    /*eslint-enable no-self-compare*/ /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */ function PropTypeError(message, data) {
+        this.message = message;
+        this.data = data && typeof data === "object" ? data : {};
+        this.stack = "";
+    }
+    // Make `instanceof Error` still work for returned errors.
+    PropTypeError.prototype = Error.prototype;
+    function createChainableTypeChecker(validate) {
+        var manualPropTypeCallCache = {};
+        var manualPropTypeWarningCount = 0;
+        function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+            componentName = componentName || ANONYMOUS;
+            propFullName = propFullName || propName;
+            if (secret !== ReactPropTypesSecret) {
+                if (throwOnDirectAccess) {
+                    // New behavior only for users of `prop-types` package
+                    var err = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");
+                    err.name = "Invariant Violation";
+                    throw err;
+                } else if (typeof console !== "undefined") {
+                    // Old behavior for people using React.PropTypes
+                    var cacheKey = componentName + ":" + propName;
+                    if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
+                    manualPropTypeWarningCount < 3) {
+                        printWarning("You are manually calling a React.PropTypes validation function for the `" + propFullName + "` prop on `" + componentName + "`. This is deprecated " + "and will throw in the standalone `prop-types` package. " + "You may be seeing this warning due to a third-party PropTypes " + "library. See https://fb.me/react-warning-dont-call-proptypes " + "for details.");
+                        manualPropTypeCallCache[cacheKey] = true;
+                        manualPropTypeWarningCount++;
+                    }
+                }
+            }
+            if (props[propName] == null) {
+                if (isRequired) {
+                    if (props[propName] === null) return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
+                    return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
+                }
+                return null;
+            } else return validate(props, propName, componentName, location, propFullName);
+        }
+        var chainedCheckType = checkType.bind(null, false);
+        chainedCheckType.isRequired = checkType.bind(null, true);
+        return chainedCheckType;
+    }
+    function createPrimitiveTypeChecker(expectedType) {
+        function validate(props, propName, componentName, location, propFullName, secret) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== expectedType) {
+                // `propValue` being instance of, say, date/regexp, pass the 'object'
+                // check, but we can offer a more precise error message here rather than
+                // 'of type `object`'.
+                var preciseType = getPreciseType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + preciseType + "` supplied to `" + componentName + "`, expected ") + ("`" + expectedType + "`."), {
+                    expectedType: expectedType
+                });
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createAnyTypeChecker() {
+        return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+    }
+    function createArrayOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside arrayOf.");
+            var propValue = props[propName];
+            if (!Array.isArray(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an array."));
+            }
+            for(var i = 0; i < propValue.length; i++){
+                var error = typeChecker(propValue, i, componentName, location, propFullName + "[" + i + "]", ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!isValidElement(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!ReactIs.isValidElementType(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement type."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createInstanceTypeChecker(expectedClass) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!(props[propName] instanceof expectedClass)) {
+                var expectedClassName = expectedClass.name || ANONYMOUS;
+                var actualClassName = getClassName(props[propName]);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + actualClassName + "` supplied to `" + componentName + "`, expected ") + ("instance of `" + expectedClassName + "`."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createEnumTypeChecker(expectedValues) {
+        if (!Array.isArray(expectedValues)) {
+            {
+                if (arguments.length > 1) printWarning("Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. " + "A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).");
+                else printWarning("Invalid argument supplied to oneOf, expected an array.");
+            }
+            return emptyFunctionThatReturnsNull;
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            for(var i = 0; i < expectedValues.length; i++){
+                if (is(propValue, expectedValues[i])) return null;
+            }
+            var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+                var type = getPreciseType(value);
+                if (type === "symbol") return String(value);
+                return value;
+            });
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` of value `" + String(propValue) + "` " + ("supplied to `" + componentName + "`, expected one of " + valuesString + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createObjectOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside objectOf.");
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an object."));
+            for(var key in propValue)if (has(propValue, key)) {
+                var error = typeChecker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createUnionTypeChecker(arrayOfTypeCheckers) {
+        if (!Array.isArray(arrayOfTypeCheckers)) {
+            printWarning("Invalid argument supplied to oneOfType, expected an instance of array.");
+            return emptyFunctionThatReturnsNull;
+        }
+        for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+            var checker = arrayOfTypeCheckers[i];
+            if (typeof checker !== "function") {
+                printWarning("Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + getPostfixForTypeWarning(checker) + " at index " + i + ".");
+                return emptyFunctionThatReturnsNull;
+            }
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var expectedTypes = [];
+            for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+                var checker = arrayOfTypeCheckers[i];
+                var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+                if (checkerResult == null) return null;
+                if (checkerResult.data && has(checkerResult.data, "expectedType")) expectedTypes.push(checkerResult.data.expectedType);
+            }
+            var expectedTypesMessage = expectedTypes.length > 0 ? ", expected one of type [" + expectedTypes.join(", ") + "]" : "";
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`" + expectedTypesMessage + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createNodeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!isNode(props[propName])) return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`, expected a ReactNode."));
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function invalidValidatorError(componentName, location, propFullName, key, type) {
+        return new PropTypeError((componentName || "React class") + ": " + location + " type `" + propFullName + "." + key + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + type + "`.");
+    }
+    function createShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            for(var key in shapeTypes){
+                var checker = shapeTypes[key];
+                if (typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createStrictShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            // We need to check all keys in case some are required but missing from props.
+            var allKeys = assign({}, props[propName], shapeTypes);
+            for(var key in allKeys){
+                var checker = shapeTypes[key];
+                if (has(shapeTypes, key) && typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                if (!checker) return new PropTypeError("Invalid " + location + " `" + propFullName + "` key `" + key + "` supplied to `" + componentName + "`." + "\nBad object: " + JSON.stringify(props[propName], null, "  ") + "\nValid keys: " + JSON.stringify(Object.keys(shapeTypes), null, "  "));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function isNode(propValue) {
+        switch(typeof propValue){
+            case "number":
+            case "string":
+            case "undefined":
+                return true;
+            case "boolean":
+                return !propValue;
+            case "object":
+                if (Array.isArray(propValue)) return propValue.every(isNode);
+                if (propValue === null || isValidElement(propValue)) return true;
+                var iteratorFn = getIteratorFn(propValue);
+                if (iteratorFn) {
+                    var iterator = iteratorFn.call(propValue);
+                    var step;
+                    if (iteratorFn !== propValue.entries) while(!(step = iterator.next()).done){
+                        if (!isNode(step.value)) return false;
+                    }
+                    else // Iterator will provide entry [k,v] tuples rather than values.
+                    while(!(step = iterator.next()).done){
+                        var entry = step.value;
+                        if (entry) {
+                            if (!isNode(entry[1])) return false;
+                        }
+                    }
+                } else return false;
+                return true;
+            default:
+                return false;
+        }
+    }
+    function isSymbol(propType, propValue) {
+        // Native Symbol.
+        if (propType === "symbol") return true;
+        // falsy value can't be a Symbol
+        if (!propValue) return false;
+        // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+        if (propValue["@@toStringTag"] === "Symbol") return true;
+        // Fallback for non-spec compliant Symbols which are polyfilled.
+        if (typeof Symbol === "function" && propValue instanceof Symbol) return true;
+        return false;
+    }
+    // Equivalent of `typeof` but with special handling for array and regexp.
+    function getPropType(propValue) {
+        var propType = typeof propValue;
+        if (Array.isArray(propValue)) return "array";
+        if (propValue instanceof RegExp) // Old webkits (at least until Android 4.0) return 'function' rather than
+        // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+        // passes PropTypes.object.
+        return "object";
+        if (isSymbol(propType, propValue)) return "symbol";
+        return propType;
+    }
+    // This handles more types than `getPropType`. Only used for error messages.
+    // See `createPrimitiveTypeChecker`.
+    function getPreciseType(propValue) {
+        if (typeof propValue === "undefined" || propValue === null) return "" + propValue;
+        var propType = getPropType(propValue);
+        if (propType === "object") {
+            if (propValue instanceof Date) return "date";
+            else if (propValue instanceof RegExp) return "regexp";
+        }
+        return propType;
+    }
+    // Returns a string that is postfixed to a warning about an invalid type.
+    // For example, "undefined" or "of type array"
+    function getPostfixForTypeWarning(value) {
+        var type = getPreciseType(value);
+        switch(type){
+            case "array":
+            case "object":
+                return "an " + type;
+            case "boolean":
+            case "date":
+            case "regexp":
+                return "a " + type;
+            default:
+                return type;
+        }
+    }
+    // Returns class name of the object, if any.
+    function getClassName(propValue) {
+        if (!propValue.constructor || !propValue.constructor.name) return ANONYMOUS;
+        return propValue.constructor.name;
+    }
+    ReactPropTypes.checkPropTypes = checkPropTypes;
+    ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+    ReactPropTypes.PropTypes = ReactPropTypes;
+    return ReactPropTypes;
+};
+
+},{"c437388b089702c3":"7EuwB","c067a60101d8520c":"7OXxh","74a0f89a70b9f3c2":"jZTZJ","18441b11647bc78":"fqKuf","bec3f6ff89f0b072":"5VwyJ"}],"7OXxh":[function(require,module,exports) {
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/ "use strict";
+/* eslint-disable no-unused-vars */ var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+function toObject(val) {
+    if (val === null || val === undefined) throw new TypeError("Object.assign cannot be called with null or undefined");
+    return Object(val);
+}
+function shouldUseNative() {
+    try {
+        if (!Object.assign) return false;
+        // Detect buggy property enumeration order in older V8 versions.
+        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
+        var test1 = new String("abc"); // eslint-disable-line no-new-wrappers
+        test1[5] = "de";
+        if (Object.getOwnPropertyNames(test1)[0] === "5") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test2 = {};
+        for(var i = 0; i < 10; i++)test2["_" + String.fromCharCode(i)] = i;
+        var order2 = Object.getOwnPropertyNames(test2).map(function(n) {
+            return test2[n];
+        });
+        if (order2.join("") !== "0123456789") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test3 = {};
+        "abcdefghijklmnopqrst".split("").forEach(function(letter) {
+            test3[letter] = letter;
+        });
+        if (Object.keys(Object.assign({}, test3)).join("") !== "abcdefghijklmnopqrst") return false;
+        return true;
+    } catch (err) {
+        // We don't expect any of the above to throw, but better to be safe.
+        return false;
+    }
+}
+module.exports = shouldUseNative() ? Object.assign : function(target, source) {
+    var from;
+    var to = toObject(target);
+    var symbols;
+    for(var s = 1; s < arguments.length; s++){
+        from = Object(arguments[s]);
+        for(var key in from)if (hasOwnProperty.call(from, key)) to[key] = from[key];
+        if (getOwnPropertySymbols) {
+            symbols = getOwnPropertySymbols(from);
+            for(var i = 0; i < symbols.length; i++)if (propIsEnumerable.call(from, symbols[i])) to[symbols[i]] = from[symbols[i]];
+        }
+    }
+    return to;
+};
+
+},{}],"jZTZJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+module.exports = ReactPropTypesSecret;
+
+},{}],"fqKuf":[function(require,module,exports) {
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
+
+},{}],"5VwyJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var printWarning = function() {};
+var ReactPropTypesSecret = require("24ba1e58d167a82c");
+var loggedTypeFailures = {};
+var has = require("898bc82f39d83f7c");
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+    for(var typeSpecName in typeSpecs)if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+            // This is intentionally an invariant that gets caught. It's the same
+            // behavior as without this statement except with a better message.
+            if (typeof typeSpecs[typeSpecName] !== "function") {
+                var err = Error((componentName || "React class") + ": " + location + " type `" + typeSpecName + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + typeof typeSpecs[typeSpecName] + "`." + "This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                err.name = "Invariant Violation";
+                throw err;
+            }
+            error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+            error = ex;
+        }
+        if (error && !(error instanceof Error)) printWarning((componentName || "React class") + ": type specification of " + location + " `" + typeSpecName + "` is invalid; the type checker " + "function must return `null` or an `Error` but returned a " + typeof error + ". " + "You may have forgotten to pass an argument to the type checker " + "creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and " + "shape all require an argument).");
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+            // Only monitor this failure once because there tends to be a lot of the
+            // same error.
+            loggedTypeFailures[error.message] = true;
+            var stack = getStack ? getStack() : "";
+            printWarning("Failed " + location + " type: " + error.message + (stack != null ? stack : ""));
+        }
+    }
+}
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */ checkPropTypes.resetWarningCache = function() {
+    loggedTypeFailures = {};
+};
+module.exports = checkPropTypes;
+
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
 
 //# sourceMappingURL=index.975ef6c8.js.map
