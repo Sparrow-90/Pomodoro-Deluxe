@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ReactSlider from "react-slider";
 import SettingsContext from "./SettingsContext";
 import { useContext } from "react";
+import BackButton from "./BackButton";
 
 function Settings() {
   const settingsInfo = useContext(SettingsContext);
@@ -28,6 +29,9 @@ function Settings() {
             min={1}
             max={120}
             />
+            <div className="text-center mt-5">
+        <BackButton onClick={()=> settingsInfo.setShowSettings(false)}/>    
+            </div>
     </div>
   )
 }

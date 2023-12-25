@@ -7,13 +7,15 @@ import { useState } from 'react';
 import SettingsContext from './SettingsContext';
 
 const App = () =>{
-    const [showSettings, setShowSettings] = useState(true);
+    const [showSettings, setShowSettings] = useState(false);
     const [workMinutes, setWorkMinutes] = useState(45);
     const [breakMinutes, setBreakMinutes] = useState(15);
 
     return(
         <main className="pt-12 max-w-80 mx-auto text-center">
             <SettingsContext.Provider value={{
+                showSettings,
+                setShowSettings,
                 workMinutes,
                 breakMinutes,
                 setWorkMinutes,

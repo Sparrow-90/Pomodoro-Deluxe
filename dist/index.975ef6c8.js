@@ -2957,13 +2957,15 @@ const container = document.getElementById("root");
 const root = (0, _client.createRoot)(container);
 const App = ()=>{
     _s();
-    const [showSettings, setShowSettings] = (0, _react.useState)(true);
+    const [showSettings, setShowSettings] = (0, _react.useState)(false);
     const [workMinutes, setWorkMinutes] = (0, _react.useState)(45);
     const [breakMinutes, setBreakMinutes] = (0, _react.useState)(15);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: "pt-12 max-w-80 mx-auto text-center",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsContextDefault.default).Provider, {
             value: {
+                showSettings,
+                setShowSettings,
                 workMinutes,
                 breakMinutes,
                 setWorkMinutes,
@@ -2971,11 +2973,11 @@ const App = ()=>{
             },
             children: showSettings ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsDefault.default), {}, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 22,
+                lineNumber: 24,
                 columnNumber: 29
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 22,
+                lineNumber: 24,
                 columnNumber: 43
             }, undefined)
         }, void 0, false, {
@@ -2989,11 +2991,11 @@ const App = ()=>{
         columnNumber: 9
     }, undefined);
 };
-_s(App, "1KfS5EPzeDICLou3Jv3gL5OXhQ0=");
+_s(App, "CyVhECCU35SU7nzFjzlJpCYriKk=");
 _c = App;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 28,
+    lineNumber: 30,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -5896,8 +5898,14 @@ var _pauseButton = require("./PauseButton");
 var _pauseButtonDefault = parcelHelpers.interopDefault(_pauseButton);
 var _settingButton = require("./SettingButton");
 var _settingButtonDefault = parcelHelpers.interopDefault(_settingButton);
+var _react = require("react");
+var _settingsContext = require("./SettingsContext");
+var _settingsContextDefault = parcelHelpers.interopDefault(_settingsContext);
+var _s = $RefreshSig$();
 const percentage = 60;
 function Timer() {
+    _s();
+    const settingsInfo = (0, _react.useContext)((0, _settingsContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-8",
         children: [
@@ -5911,7 +5919,7 @@ function Timer() {
                 })
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -5919,39 +5927,42 @@ function Timer() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
                         fileName: "src/Timer.jsx",
-                        lineNumber: 18,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
                         fileName: "src/Timer.jsx",
-                        lineNumber: 19,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                 className: "mt-[20px] flex justify-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingButtonDefault.default), {}, void 0, false, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingButtonDefault.default), {
+                    onClick: ()=>settingsInfo.setShowSettings(true)
+                }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 22,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 21,
+                lineNumber: 24,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Timer.jsx",
-        lineNumber: 11,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }
+_s(Timer, "I8Uq6SmA7PGlwgU1vD82sVLSchk=");
 _c = Timer;
 var _c;
 $RefreshReg$(_c, "Timer");
@@ -5961,7 +5972,7 @@ $RefreshReg$(_c, "Timer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT","./PlayButton":"kv3W7","./PauseButton":"6R3G6","./SettingButton":"5Okv5"}],"iGJmv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-circular-progressbar":"iGJmv","react-circular-progressbar/dist/styles.css":"aSnaT","./PlayButton":"kv3W7","./PauseButton":"6R3G6","./SettingButton":"5Okv5","react":"21dqq","./SettingsContext":"3uKnq"}],"iGJmv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CircularProgressbar", ()=>CircularProgressbar);
@@ -6364,7 +6375,26 @@ $RefreshReg$(_c, "SettingButton");
 },{"react/jsx-dev-runtime":"iTorj","/assets/cog.svg":"dDxf6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dDxf6":[function(require,module,exports) {
 module.exports = require("6d6a73a28c88151a").getBundleURL("bLxZJ") + "cog.e1e4dd30.svg" + "?" + Date.now();
 
-},{"6d6a73a28c88151a":"lgJ39"}],"lOjBx":[function(require,module,exports) {
+},{"6d6a73a28c88151a":"lgJ39"}],"3uKnq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$28a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$28a8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const SettingsContext = /*#__PURE__*/ (0, _reactDefault.default).createContext({});
+exports.default = SettingsContext;
+
+  $parcel$ReactRefreshHelpers$28a8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lOjBx":[function(require,module,exports) {
 "use strict";
 var m = require("aaccff5d309d9239");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -27861,6 +27891,8 @@ var _reactSlider = require("react-slider");
 var _reactSliderDefault = parcelHelpers.interopDefault(_reactSlider);
 var _settingsContext = require("./SettingsContext");
 var _settingsContextDefault = parcelHelpers.interopDefault(_settingsContext);
+var _backButton = require("./BackButton");
+var _backButtonDefault = parcelHelpers.interopDefault(_backButton);
 var _s = $RefreshSig$();
 function Settings() {
     _s();
@@ -27878,7 +27910,7 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
@@ -27891,7 +27923,7 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27903,7 +27935,7 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
@@ -27916,13 +27948,27 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center mt-5",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _backButtonDefault.default), {
+                    onClick: ()=>settingsInfo.setShowSettings(false)
+                }, void 0, false, {
+                    fileName: "src/Settings.jsx",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 32,
+                columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Settings.jsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }
@@ -27937,7 +27983,7 @@ $RefreshReg$(_c, "Settings");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-slider":"3unrN","react":"21dqq","./SettingsContext":"3uKnq"}],"3unrN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-slider":"3unrN","react":"21dqq","./SettingsContext":"3uKnq","./BackButton":"860aV"}],"3unrN":[function(require,module,exports) {
 module.exports = require("880e1a7831d7dcc6");
 
 },{"880e1a7831d7dcc6":"iggI3"}],"iggI3":[function(require,module,exports) {
@@ -30104,25 +30150,53 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"3uKnq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$28a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"860aV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a6cf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$28a8.prelude(module);
+$parcel$ReactRefreshHelpers$a6cf.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const SettingsContext = /*#__PURE__*/ (0, _reactDefault.default).createContext({});
-exports.default = SettingsContext;
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _arrowSvg = require("/assets/arrow.svg");
+var _arrowSvgDefault = parcelHelpers.interopDefault(_arrowSvg);
+function BackButton(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        ...props,
+        className: "w-auto bg-slate-700 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "w-9",
+                src: (0, _arrowSvgDefault.default),
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/BackButton.jsx",
+                lineNumber: 6,
+                columnNumber: 8
+            }, this),
+            "Back"
+        ]
+    }, void 0, true, {
+        fileName: "src/BackButton.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = BackButton;
+exports.default = BackButton;
+var _c;
+$RefreshReg$(_c, "BackButton");
 
-  $parcel$ReactRefreshHelpers$28a8.postlude(module);
+  $parcel$ReactRefreshHelpers$a6cf.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
+},{"react/jsx-dev-runtime":"iTorj","/assets/arrow.svg":"j5Mh9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j5Mh9":[function(require,module,exports) {
+module.exports = require("e6c3d4a05e85db7d").getBundleURL("bLxZJ") + "arrow.d791fdbc.svg" + "?" + Date.now();
+
+},{"e6c3d4a05e85db7d":"lgJ39"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire6a88")
 
 //# sourceMappingURL=index.975ef6c8.js.map
