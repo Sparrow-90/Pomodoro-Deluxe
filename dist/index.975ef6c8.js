@@ -5906,6 +5906,7 @@ const percentage = 60;
 function Timer() {
     _s();
     const settingsInfo = (0, _react.useContext)((0, _settingsContextDefault.default));
+    const [isPaused, setIsPaused] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-8",
         children: [
@@ -5919,26 +5920,23 @@ function Timer() {
                 })
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                 className: "mt-[20px]",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
-                        fileName: "src/Timer.jsx",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
-                        fileName: "src/Timer.jsx",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: isPaused ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
+                    fileName: "src/Timer.jsx",
+                    lineNumber: 23,
+                    columnNumber: 21
+                }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
+                    fileName: "src/Timer.jsx",
+                    lineNumber: 23,
+                    columnNumber: 37
+                }, this)
+            }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -5947,22 +5945,22 @@ function Timer() {
                     onClick: ()=>settingsInfo.setShowSettings(true)
                 }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 24,
+                lineNumber: 25,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Timer.jsx",
-        lineNumber: 14,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
-_s(Timer, "I8Uq6SmA7PGlwgU1vD82sVLSchk=");
+_s(Timer, "zgKfZhw5jx2SnMN0QJ7xOd9ZvYc=");
 _c = Timer;
 var _c;
 $RefreshReg$(_c, "Timer");
