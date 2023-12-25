@@ -5907,36 +5907,72 @@ function Timer() {
     _s();
     const settingsInfo = (0, _react.useContext)((0, _settingsContextDefault.default));
     const [isPaused, setIsPaused] = (0, _react.useState)(false);
+    const [mode, setMode] = (0, _react.useState)("work");
+    const [secondLeft, setSecondLeft] = (0, _react.useState)(0);
+    const secondsLeftRef = (0, _react.useRef)(secondLeft);
+    const isPausedRef = (0, _react.useRef)(isPaused);
+    const modeRef = (0, _react.useRef)(mode);
+    function switchMode() {
+        const nextMode = modeRef.current === "work" ? "break" : "work";
+        const nextSeconds = nextMode === "work" ? settingsInfo.workMinutes : settingsInfo.breakMinutes;
+        setMode(nextMode);
+        modeRef.current = nextMode;
+        setSecondLeft(nextSeconds);
+        secondsLeftRef.current = nextSeconds;
+    }
+    function tick() {
+        secondsLeftRef.current--;
+        setSecondLeft(secondsLeftRef.current);
+    }
+    function initTimer() {
+        setSecondLeft(settingsInfo.workMinutes * 60);
+    }
+    (0, _react.useEffect)(()=>{
+        initTimer();
+        const interval = setInterval(()=>{
+            if (isPausedRef.current) return;
+            if (secondsLeftRef.current === 0) return switchMode();
+            tick();
+        }, 1000);
+        return ()=>clearInterval(interval);
+    }, [
+        settingsInfo
+    ]);
+    const totalSeconds = mode === "work" ? settingsInfo.workMinutes * 60 : settingsInfo.breakMinutes * 60;
+    const percentage = Math.round(secondLeft / totalSeconds * 100);
+    const minutes = Math.floor(secondLeft / 60);
+    let seconds = secondLeft % 60;
+    if (seconds < 10) seconds = "0" + seconds;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactCircularProgressbar.CircularProgressbar), {
                 value: percentage,
-                text: `${percentage}%`,
+                text: minutes + ":" + seconds,
                 styles: (0, _reactCircularProgressbar.buildStyles)({
                     textColor: "#fff",
-                    pathColor: "#ef4444",
+                    pathColor: mode === "work" ? "#ef4444" : "green",
                     tailColor: "#10b981"
                 })
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 17,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                 className: "mt-[20px]",
                 children: isPaused ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 23,
+                    lineNumber: 64,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 23,
+                    lineNumber: 64,
                     columnNumber: 37
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 22,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -5945,22 +5981,22 @@ function Timer() {
                     onClick: ()=>settingsInfo.setShowSettings(true)
                 }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 26,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 25,
+                lineNumber: 66,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Timer.jsx",
-        lineNumber: 16,
+        lineNumber: 57,
         columnNumber: 5
     }, this);
 }
-_s(Timer, "zgKfZhw5jx2SnMN0QJ7xOd9ZvYc=");
+_s(Timer, "ZfIF43nvjQW9B++5zFTN9lz+Tos=");
 _c = Timer;
 var _c;
 $RefreshReg$(_c, "Timer");
