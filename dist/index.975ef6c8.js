@@ -2972,7 +2972,7 @@ const App = ()=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "font-pacifico",
+                className: "font-pacifico mb-4",
                 children: "deluxe"
             }, void 0, false, {
                 fileName: "src/index.js",
@@ -6286,7 +6286,7 @@ function PlayButton(props) {
         ...props,
         className: "w-20 bg-transparent inline-block",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "text-white ",
+            className: "text-white drop-shadow-md ",
             src: (0, _playSvgDefault.default),
             alt: ""
         }, void 0, false, {
@@ -6364,6 +6364,7 @@ function PauseButton(props) {
         ...props,
         className: "w-20 bg-transparent inline-block",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "drop-shadow-md",
             src: (0, _pauseSvgDefault.default),
             alt: ""
         }, void 0, false, {
@@ -6405,7 +6406,7 @@ var _cogSvgDefault = parcelHelpers.interopDefault(_cogSvg);
 function SettingButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-auto bg-gradient-to-tr from-cyan-800 to-cyan-900 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        className: "w-auto bg-gradient-to-r from-gray-200 to-slate-300 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center drop-shadow-md",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-9",
@@ -6416,7 +6417,14 @@ function SettingButton(props) {
                 lineNumber: 6,
                 columnNumber: 9
             }, this),
-            "Settings"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-slate-500 font-bold",
+                children: "settings"
+            }, void 0, false, {
+                fileName: "src/SettingButton.jsx",
+                lineNumber: 7,
+                columnNumber: 8
+            }, this)
         ]
     }, void 0, true, {
         fileName: "src/SettingButton.jsx",
@@ -27963,15 +27971,15 @@ function Settings() {
         className: "text-left",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-3xl",
-                children: "Settings"
+                className: "text-xl font-bold",
+                children: "settings"
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
                 lineNumber: 10,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "block mb-3 mt-5",
+                className: "block mb-3 mt-5 font-bold text-sm",
                 children: [
                     "work: ",
                     settingsInfo.workMinutes,
@@ -27996,7 +28004,7 @@ function Settings() {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "block mb-3 mt-5",
+                className: "block mb-3 mt-5 font-bold text-sm",
                 children: [
                     "break: ",
                     settingsInfo.breakMinutes,
@@ -28021,7 +28029,7 @@ function Settings() {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-center mt-5",
+                className: "text-center mt-8 mb-4",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _backButtonDefault.default), {
                     onClick: ()=>settingsInfo.setShowSettings(false)
                 }, void 0, false, {
@@ -30234,7 +30242,7 @@ var _arrowSvgDefault = parcelHelpers.interopDefault(_arrowSvg);
 function BackButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-auto bg-gradient-to-tr from-cyan-800 to-cyan-900 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        className: "w-auto bg-gradient-to-r from-gray-200 to-slate-300 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center drop-shadow-md",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-9",
@@ -30245,7 +30253,14 @@ function BackButton(props) {
                 lineNumber: 6,
                 columnNumber: 8
             }, this),
-            "Back"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "font-bold text-slate-500",
+                children: "Back"
+            }, void 0, false, {
+                fileName: "src/BackButton.jsx",
+                lineNumber: 7,
+                columnNumber: 8
+            }, this)
         ]
     }, void 0, true, {
         fileName: "src/BackButton.jsx",
