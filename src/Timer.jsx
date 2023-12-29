@@ -6,35 +6,42 @@ import SettingButton from './SettingButton';
 import { useContext, useState, useEffect, useRef } from 'react';
 import SettingsContext from './SettingsContext';
 
-const percentage = 60;
+// const percentage = 60;
 
 export default function Timer() {
   const settingsInfo = useContext(SettingsContext);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   const [mode, setMode] = useState('work')
-  const [secondLeft, setSecondLeft] = useState(0);
-  const secondsLeftRef = useRef(secondLeft);
+  const [secondsLeft, setSecondsLeft] = useState(0);
+  const secondsLeftRef = useRef(secondsLeft);
   const isPausedRef = useRef(isPaused);
-  const modeRef = useRef(mode)
-
-  function switchMode(){
-    const nextMode = modeRef.current === 'work' ? 'break' : 'work';
-    const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes)
-    setMode(nextMode);
-    modeRef.current = nextMode
-    setSecondLeft(nextSeconds);
-    secondsLeftRef.current = nextSeconds
-  };
+  const modeRef = useRef(mode);
 
   function tick(){
     secondsLeftRef.current--;
-    setSecondLeft(secondsLeftRef.current)
+    setSecondsLeft(secondsLeftRef.current)
   };
-  function initTimer(){
-    setSecondLeft(settingsInfo.workMinutes * 60);
-  };
+
+
   useEffect(()=>{
+
+    function switchMode(){
+      const nextMode = modeRef.current === 'work' ? 'break' : 'work';
+      const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes) *60
+      setMode(nextMode);
+      modeRef.current = nextMode
+      setSecondsLeft(nextSeconds);
+      secondsLeftRef.current = nextSeconds;
+    };
+  
+    function initTimer(){
+      secondsLeftRef.current = settingsInfo.workMinutes * 60
+      setSecondsLeft(secondsLeftRef.current);
+    };
+    
     initTimer();
+
+
     const interval = setInterval(()=>{
       if(isPausedRef.current){
         return;
@@ -45,23 +52,33 @@ export default function Timer() {
       tick()
     }, 1000);
     return () => clearInterval(interval);
+
   }, [settingsInfo]);
 
-  const totalSeconds = mode === 'work' ? settingsInfo.workMinutes * 60 : settingsInfo.breakMinutes * 60;
-  const percentage = Math.round(secondLeft / totalSeconds * 100);
-  const minutes = Math.floor(secondLeft / 60);
-  let seconds = secondLeft % 60;
+  const totalSeconds = mode === 'work' 
+      ? settingsInfo.workMinutes * 60 
+      : settingsInfo.breakMinutes * 60;
+  const percentage = Math.round(secondsLeft / totalSeconds * 100);
+
+  const minutes = Math.floor(secondsLeft / 60);
+  let seconds = secondsLeft % 60;
+
   if(seconds < 10) seconds = '0' + seconds;
 
   return (
     <div className='mt-8'>
-      <CircularProgressbar value={percentage} text={minutes + ':' + seconds} styles={buildStyles({
+      <CircularProgressbar 
+          value={percentage} 
+          text={minutes + ':' + seconds} 
+          styles={buildStyles({
         textColor: '#fff',
         pathColor: mode === 'work' ? '#ef4444' : 'green',
         tailColor: '#10b981'
       })}/>
       <section className='mt-[20px]'>
-        {isPaused ? <PlayButton/> : <PauseButton/>}
+        {isPaused 
+          ? <PlayButton onClick={()=>{setIsPaused(false); isPausedRef.current = false}}/> 
+          : <PauseButton onClick={()=>{setIsPaused(true); isPausedRef.current = true}}/>}
       </section>
       <section className='mt-[20px] flex justify-center'>
         <SettingButton onClick={()=> settingsInfo.setShowSettings(true)} />

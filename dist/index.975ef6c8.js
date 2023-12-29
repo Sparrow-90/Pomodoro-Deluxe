@@ -2967,8 +2967,8 @@ const App = ()=>{
                 showSettings,
                 setShowSettings,
                 workMinutes,
-                breakMinutes,
                 setWorkMinutes,
+                breakMinutes,
                 setBreakMinutes
             },
             children: showSettings ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsDefault.default), {}, void 0, false, {
@@ -5902,32 +5902,32 @@ var _react = require("react");
 var _settingsContext = require("./SettingsContext");
 var _settingsContextDefault = parcelHelpers.interopDefault(_settingsContext);
 var _s = $RefreshSig$();
-const percentage = 60;
 function Timer() {
     _s();
     const settingsInfo = (0, _react.useContext)((0, _settingsContextDefault.default));
-    const [isPaused, setIsPaused] = (0, _react.useState)(false);
+    const [isPaused, setIsPaused] = (0, _react.useState)(true);
     const [mode, setMode] = (0, _react.useState)("work");
-    const [secondLeft, setSecondLeft] = (0, _react.useState)(0);
-    const secondsLeftRef = (0, _react.useRef)(secondLeft);
+    const [secondsLeft, setSecondsLeft] = (0, _react.useState)(0);
+    const secondsLeftRef = (0, _react.useRef)(secondsLeft);
     const isPausedRef = (0, _react.useRef)(isPaused);
     const modeRef = (0, _react.useRef)(mode);
-    function switchMode() {
-        const nextMode = modeRef.current === "work" ? "break" : "work";
-        const nextSeconds = nextMode === "work" ? settingsInfo.workMinutes : settingsInfo.breakMinutes;
-        setMode(nextMode);
-        modeRef.current = nextMode;
-        setSecondLeft(nextSeconds);
-        secondsLeftRef.current = nextSeconds;
-    }
     function tick() {
         secondsLeftRef.current--;
-        setSecondLeft(secondsLeftRef.current);
-    }
-    function initTimer() {
-        setSecondLeft(settingsInfo.workMinutes * 60);
+        setSecondsLeft(secondsLeftRef.current);
     }
     (0, _react.useEffect)(()=>{
+        function switchMode() {
+            const nextMode = modeRef.current === "work" ? "break" : "work";
+            const nextSeconds = (nextMode === "work" ? settingsInfo.workMinutes : settingsInfo.breakMinutes) * 60;
+            setMode(nextMode);
+            modeRef.current = nextMode;
+            setSecondsLeft(nextSeconds);
+            secondsLeftRef.current = nextSeconds;
+        }
+        function initTimer() {
+            secondsLeftRef.current = settingsInfo.workMinutes * 60;
+            setSecondsLeft(secondsLeftRef.current);
+        }
         initTimer();
         const interval = setInterval(()=>{
             if (isPausedRef.current) return;
@@ -5939,9 +5939,9 @@ function Timer() {
         settingsInfo
     ]);
     const totalSeconds = mode === "work" ? settingsInfo.workMinutes * 60 : settingsInfo.breakMinutes * 60;
-    const percentage = Math.round(secondLeft / totalSeconds * 100);
-    const minutes = Math.floor(secondLeft / 60);
-    let seconds = secondLeft % 60;
+    const percentage = Math.round(secondsLeft / totalSeconds * 100);
+    const minutes = Math.floor(secondsLeft / 60);
+    let seconds = secondsLeft % 60;
     if (seconds < 10) seconds = "0" + seconds;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-8",
@@ -5956,23 +5956,33 @@ function Timer() {
                 })
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 58,
+                lineNumber: 70,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                 className: "mt-[20px]",
-                children: isPaused ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {}, void 0, false, {
+                children: isPaused ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playButtonDefault.default), {
+                    onClick: ()=>{
+                        setIsPaused(false);
+                        isPausedRef.current = false;
+                    }
+                }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 64,
-                    columnNumber: 21
-                }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {}, void 0, false, {
+                    lineNumber: 80,
+                    columnNumber: 13
+                }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pauseButtonDefault.default), {
+                    onClick: ()=>{
+                        setIsPaused(true);
+                        isPausedRef.current = true;
+                    }
+                }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 64,
-                    columnNumber: 37
+                    lineNumber: 81,
+                    columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 63,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -5981,22 +5991,22 @@ function Timer() {
                     onClick: ()=>settingsInfo.setShowSettings(true)
                 }, void 0, false, {
                     fileName: "src/Timer.jsx",
-                    lineNumber: 67,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Timer.jsx",
-                lineNumber: 66,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Timer.jsx",
-        lineNumber: 57,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }
-_s(Timer, "ZfIF43nvjQW9B++5zFTN9lz+Tos=");
+_s(Timer, "wLsOXioxHyC+0a8S06ETGdtL+3A=");
 _c = Timer;
 var _c;
 $RefreshReg$(_c, "Timer");
@@ -27944,7 +27954,7 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 12,
+                lineNumber: 11,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
@@ -27957,7 +27967,7 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 13,
+                lineNumber: 12,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27969,7 +27979,7 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 22,
+                lineNumber: 21,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
@@ -27982,7 +27992,7 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 23,
+                lineNumber: 22,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27991,18 +28001,18 @@ function Settings() {
                     onClick: ()=>settingsInfo.setShowSettings(false)
                 }, void 0, false, {
                     fileName: "src/Settings.jsx",
-                    lineNumber: 33,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Settings.jsx",
-        lineNumber: 10,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 }
