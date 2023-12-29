@@ -10,8 +10,8 @@ function Settings() {
         Settings
         <label className="block mb-3 mt-5">work: {settingsInfo.workMinutes}:00</label>
         <ReactSlider 
-            className="h-10 border-2 border-red-500 rounded-3xl"
-            thumbClassName="bg-red-500 w-10 h-10 cursor-pointer rounded-3xl "
+            className="h-10 border-2 border-[#e65445] rounded-3xl"
+            thumbClassName="bg-[#e65445] w-10 h-10 cursor-pointer rounded-3xl "
             trackClassName={'track'}
             value={settingsInfo.workMinutes}
             onChange={newValue => settingsInfo.setWorkMinutes(newValue)}

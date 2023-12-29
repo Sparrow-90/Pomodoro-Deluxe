@@ -5951,7 +5951,7 @@ function Timer() {
                 text: minutes + ":" + seconds,
                 styles: (0, _reactCircularProgressbar.buildStyles)({
                     textColor: "#fff",
-                    pathColor: mode === "work" ? "#ef4444" : "green",
+                    pathColor: mode === "work" ? "#e65445" : "green",
                     tailColor: "#10b981"
                 })
             }, void 0, false, {
@@ -6387,7 +6387,7 @@ var _cogSvgDefault = parcelHelpers.interopDefault(_cogSvg);
 function SettingButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-auto bg-slate-700 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        className: "w-auto bg-gradient-to-tr from-cyan-800 to-cyan-900 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-9",
@@ -27958,8 +27958,8 @@ function Settings() {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
-                className: "h-10 border-2 border-red-500 rounded-3xl",
-                thumbClassName: "bg-red-500 w-10 h-10 cursor-pointer rounded-3xl ",
+                className: "h-10 border-2 border-[#e65445] rounded-3xl",
+                thumbClassName: "bg-[#e65445] w-10 h-10 cursor-pointer rounded-3xl ",
                 trackClassName: "track",
                 value: settingsInfo.workMinutes,
                 onChange: (newValue)=>settingsInfo.setWorkMinutes(newValue),
@@ -30209,7 +30209,7 @@ var _arrowSvgDefault = parcelHelpers.interopDefault(_arrowSvg);
 function BackButton(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         ...props,
-        className: "w-auto bg-slate-700 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
+        className: "w-auto bg-gradient-to-tr from-cyan-800 to-cyan-900 py-2 px-4 rounded-lg text-xl leading-8 flex gap-2 items-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-9",
