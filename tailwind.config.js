@@ -4,8 +4,12 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}"
   ],
   theme: {
+    fontFamily: {
+      rubik : ['Rubik Bubbles'],
+      pacifico : ['Pacifico'],
+    },
     extend: {
-      
+
     },
   },
   plugins: [],

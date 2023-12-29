@@ -13,6 +13,8 @@ const App = () =>{
 
     return(
         <main className="pt-12 max-w-80 mx-auto text-center">
+            <h1 className='font-rubik text-4xl'>Pomodoro</h1>
+            <p className='font-pacifico'>deluxe</p>
             <SettingsContext.Provider value={{
                 showSettings,
                 setShowSettings,

@@ -7,11 +7,13 @@ function Settings() {
   const settingsInfo = useContext(SettingsContext);
   return (
     <div className="text-left">
+        <p className="text-3xl">
         Settings
+        </p> 
         <label className="block mb-3 mt-5">work: {settingsInfo.workMinutes}:00</label>
         <ReactSlider 
-            className="h-10 border-2 border-[#e65445] rounded-3xl"
-            thumbClassName="bg-[#e65445] w-10 h-10 cursor-pointer rounded-3xl "
+            className="h-10 border-4 border-[#2cb2cd] rounded-3xl"
+            thumbClassName="bg-[#2cb2cd] w-9 h-9 cursor-pointer rounded-3xl "
             trackClassName={'track'}
             value={settingsInfo.workMinutes}
             onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
@@ -20,8 +22,8 @@ function Settings() {
             />
         <label className="block mb-3 mt-5">break: {settingsInfo.breakMinutes}:00</label>
         <ReactSlider 
-            className="h-10 border-2 border-green-500 rounded-3xl"
-            thumbClassName="bg-green-500 w-10 h-10 cursor-pointer rounded-3xl "
+            className="h-10 border-4 border-green-500 rounded-3xl"
+            thumbClassName="bg-green-500 w-9 h-9 cursor-pointer rounded-3xl "
             trackClassName={'track'}
             value={settingsInfo.breakMinutes}
             onChange={newValue => settingsInfo.setBreakMinutes(newValue)}

@@ -2962,30 +2962,48 @@ const App = ()=>{
     const [breakMinutes, setBreakMinutes] = (0, _react.useState)(15);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: "pt-12 max-w-80 mx-auto text-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsContextDefault.default).Provider, {
-            value: {
-                showSettings,
-                setShowSettings,
-                workMinutes,
-                setWorkMinutes,
-                breakMinutes,
-                setBreakMinutes
-            },
-            children: showSettings ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsDefault.default), {}, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "font-rubik text-4xl",
+                children: "Pomodoro"
+            }, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 24,
-                columnNumber: 29
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
+                lineNumber: 16,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "font-pacifico",
+                children: "deluxe"
+            }, void 0, false, {
                 fileName: "src/index.js",
-                lineNumber: 24,
-                columnNumber: 43
+                lineNumber: 17,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsContextDefault.default).Provider, {
+                value: {
+                    showSettings,
+                    setShowSettings,
+                    workMinutes,
+                    setWorkMinutes,
+                    breakMinutes,
+                    setBreakMinutes
+                },
+                children: showSettings ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _settingsDefault.default), {}, void 0, false, {
+                    fileName: "src/index.js",
+                    lineNumber: 26,
+                    columnNumber: 29
+                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timerDefault.default), {}, void 0, false, {
+                    fileName: "src/index.js",
+                    lineNumber: 26,
+                    columnNumber: 43
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/index.js",
+                lineNumber: 18,
+                columnNumber: 13
             }, undefined)
-        }, void 0, false, {
-            fileName: "src/index.js",
-            lineNumber: 16,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "src/index.js",
         lineNumber: 15,
         columnNumber: 9
@@ -2995,7 +3013,7 @@ _s(App, "CyVhECCU35SU7nzFjzlJpCYriKk=");
 _c = App;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 30,
+    lineNumber: 32,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -5951,7 +5969,7 @@ function Timer() {
                 text: minutes + ":" + seconds,
                 styles: (0, _reactCircularProgressbar.buildStyles)({
                     textColor: "#fff",
-                    pathColor: mode === "work" ? "#e65445" : "green",
+                    pathColor: mode === "work" ? "#2cb2cd" : "green",
                     tailColor: "#10b981"
                 })
             }, void 0, false, {
@@ -27944,7 +27962,14 @@ function Settings() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "text-left",
         children: [
-            "Settings",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-3xl",
+                children: "Settings"
+            }, void 0, false, {
+                fileName: "src/Settings.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                 className: "block mb-3 mt-5",
                 children: [
@@ -27954,12 +27979,12 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
-                className: "h-10 border-2 border-[#e65445] rounded-3xl",
-                thumbClassName: "bg-[#e65445] w-10 h-10 cursor-pointer rounded-3xl ",
+                className: "h-10 border-4 border-[#2cb2cd] rounded-3xl",
+                thumbClassName: "bg-[#2cb2cd] w-9 h-9 cursor-pointer rounded-3xl ",
                 trackClassName: "track",
                 value: settingsInfo.workMinutes,
                 onChange: (newValue)=>settingsInfo.setWorkMinutes(newValue),
@@ -27967,7 +27992,7 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27979,12 +28004,12 @@ function Settings() {
                 ]
             }, void 0, true, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 21,
+                lineNumber: 23,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSliderDefault.default), {
-                className: "h-10 border-2 border-green-500 rounded-3xl",
-                thumbClassName: "bg-green-500 w-10 h-10 cursor-pointer rounded-3xl ",
+                className: "h-10 border-4 border-green-500 rounded-3xl",
+                thumbClassName: "bg-green-500 w-9 h-9 cursor-pointer rounded-3xl ",
                 trackClassName: "track",
                 value: settingsInfo.breakMinutes,
                 onChange: (newValue)=>settingsInfo.setBreakMinutes(newValue),
@@ -27992,7 +28017,7 @@ function Settings() {
                 max: 120
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 22,
+                lineNumber: 24,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28001,12 +28026,12 @@ function Settings() {
                     onClick: ()=>settingsInfo.setShowSettings(false)
                 }, void 0, false, {
                     fileName: "src/Settings.jsx",
-                    lineNumber: 32,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Settings.jsx",
-                lineNumber: 31,
+                lineNumber: 33,
                 columnNumber: 13
             }, this)
         ]
