@@ -8,7 +8,7 @@
     "build": "parcel build src/*index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mateusz Wróbel",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.10.3",
