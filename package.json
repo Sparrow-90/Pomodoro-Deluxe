@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/*index.html",
-    "build": "parcel build src/*index.html"
+    "build": "parcel build src/*.html --public-url=https://pomodoro-deluxe.netlify.app/"
   },
   "keywords": [],
   "author": "Mateusz Wróbel",
